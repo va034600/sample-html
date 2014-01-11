@@ -1,0 +1,7 @@
+#def p.notes {
+  color: blue;
+}
+
+#abc p.notes {
+  color: red;
+}

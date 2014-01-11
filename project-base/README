@@ -1,0 +1,56 @@
+インストール手順
+・npm install
+
+gruntコマンド
+・grunt watch
+	watchする
+		対象ファイルが更新されたら、以下を実施する
+			・cssを作成する。
+			・livereloadを実行する。
+
+・grunt connect
+	ローカルにサーバを立ち上げる。
+
+・grunt upwatch
+	watchとconnectを行う。
+
+・grunt bower
+	javascriptをダウンロードする。
+
+・grunt requirejs
+	jsをrequire_config.jsをもとに結合する。
+	出力先はjs/main.min.jsに出力される。
+
+・grunt compass
+	http://lab.sonicmoov.com/markup/sass-compass/
+	ネストは、Sass の中でも一番よく使う機能で、CSS を HTML の構造に合わせて入れ子で書いて行くことができますっ
+
+・grunt mincss
+	指定のcssを圧縮する
+
+・grunt mincompass
+	compassとmincompassを実行する。
+
+
+
+
+
+sass compass
+Liveload
+r.js
+grunt.js
+Bower
+requirejs
+backbone.js
+	router
+	view
+	text
+	model
+	i18n
+
+
+
+foundation
+
+
+
