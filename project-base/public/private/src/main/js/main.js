@@ -1,6 +1,8 @@
 require([
+	"BaseSync",
 	"routers/MainRouter"
 ], function(
+	BaseSync,
 	MainRouter
 ) {
 	new MainRouter();

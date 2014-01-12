@@ -6,7 +6,7 @@ gruntコマンド
 	watchする
 		対象ファイルが更新されたら、以下を実施する
 			・cssを作成する。
-			・livereloadを実行する。
+			・liveReloadを実行する。
 
 ・grunt connect
 	ローカルにサーバを立ち上げる。
@@ -34,9 +34,9 @@ gruntコマンド
 
 
 
-
+connect
+LiveReload
 sass compass
-Liveload
 r.js
 grunt.js
 Bower

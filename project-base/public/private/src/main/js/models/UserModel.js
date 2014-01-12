@@ -10,6 +10,7 @@ define([
 	BaseModel
 ){
 	var Result = BaseModel.extend({
+		urlRoot: "/user"
 	});
 
 	return Result;
