@@ -25,7 +25,9 @@ define([
 			this.options.userModel.fetch({data:{id:2}});
 		},
 		render : function() {
-			$(this.el).html(this.template(this.options.userModel.toJSON()));
+			$(this.el).html(this.template({ 
+				model:this.options.userModel
+			}));
 			return this;
 		},
 		onClickByMoveButton:function(event){

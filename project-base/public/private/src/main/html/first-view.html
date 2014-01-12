@@ -1,4 +1,10 @@
 <div id="abc">
-	<p class="notes">abcd</p>
+	<p class="notes"></p>
 	<a class="move-button">移動</a>
 </div>
+
+<script id="template-item" type="text/template">
+	id:<%- model.id %>
+	name:<%- model.get("name") %>
+	sample:<%- sample %><br>
+</script>

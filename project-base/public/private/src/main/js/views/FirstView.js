@@ -12,7 +12,6 @@ define([
 	UserCollection
 ){
 	var Result = Backbone.View.extend({
-		template : _.template(templateHtml),
 		options : {
 			userCollection : new UserCollection()
 		},
@@ -22,13 +21,18 @@ define([
 		initialize : function() {
 			this.listenTo(this.options.userCollection, 'sync', this.render);
 
+			$(this.el).html(templateHtml);
 			this.options.userCollection.fetch();
 		},
 		render : function() {
-			$(this.el).html(this.template());
+			var template1 = _.template($("#template-item").html());
 
+			this.$('.notes').empty();
 			this.options.userCollection.each(function(model) {
-				this.$('.notes').html(this.$('.notes').html() + " " + model.get("name"));
+				this.$('.notes').append(template1({
+					model:model,
+					sample:"abc"
+				}));
 			});
 			return this;
 		},
