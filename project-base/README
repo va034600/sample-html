@@ -32,8 +32,7 @@ gruntコマンド
 	出力先はjs/main.min.jsに出力される。
 
 ・grunt compass
-	http://lab.sonicmoov.com/markup/sass-compass/
-	ネストは、Sass の中でも一番よく使う機能で、CSS を HTML の構造に合わせて入れ子で書いて行くことができますっ
+	sassファイルをコンパイルします。
 
 ・grunt mincss
 	指定のcssを圧縮する
