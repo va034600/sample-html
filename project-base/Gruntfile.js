@@ -76,6 +76,18 @@ module.exports = function(grunt) {
                     'public/css/style.min.css': ['public/css/style.css']
                 }
             }
+        },
+        jshint: {
+            files: [
+                // 'Gruntfile.js',
+                // 'package.json',
+                // '.jshintrc',
+                'public/private/src/main/js/**/*.js',
+                '!public/private/src/main/js/require_config.js'
+            ],
+            options: {
+                jshintrc: '.jshintrc'
+            }
         }
     });
 
