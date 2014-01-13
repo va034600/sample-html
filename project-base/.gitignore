@@ -1,6 +1,11 @@
 node_modules
 components
-/.*
-!.gitignore
-!.travis.yml
 .sass-cache
+
+/.idea
+/.idea_modules
+/.classpath
+/.project
+/.settings
+/.target
+/bin
