@@ -34,7 +34,8 @@
     },
     "foundation": {
       "js": "**/foundation.js",
-      "scss":"**/components/*.scss"
+      "scss":"**/foundation/*.scss",
+      "scss/foundation":"**/components/*.scss"
     },
     "normalize-scss": {
       "scss":"**/*.scss"

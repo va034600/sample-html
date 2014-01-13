@@ -1,2 +1,46 @@
+@charset "UTF-8";
+
+@import "../../lib/bower/scss/normalize-scss/normalize";
+
+@import
+  "../../lib/bower/scss/foundation/foundation/accordion",
+  "../../lib/bower/scss/foundation/foundation/alert-boxes",
+  "../../lib/bower/scss/foundation/foundation/block-grid",
+  "../../lib/bower/scss/foundation/foundation/breadcrumbs",
+  "../../lib/bower/scss/foundation/foundation/button-groups",
+  "../../lib/bower/scss/foundation/foundation/buttons",
+  "../../lib/bower/scss/foundation/foundation/clearing",
+  "../../lib/bower/scss/foundation/foundation/dropdown",
+  "../../lib/bower/scss/foundation/foundation/dropdown-buttons",
+  "../../lib/bower/scss/foundation/foundation/flex-video",
+  "../../lib/bower/scss/foundation/foundation/forms",
+  "../../lib/bower/scss/foundation/foundation/grid",
+  "../../lib/bower/scss/foundation/foundation/inline-lists",
+  "../../lib/bower/scss/foundation/foundation/joyride",
+  "../../lib/bower/scss/foundation/foundation/keystrokes",
+  "../../lib/bower/scss/foundation/foundation/labels",
+  "../../lib/bower/scss/foundation/foundation/magellan",
+  "../../lib/bower/scss/foundation/foundation/orbit",
+  "../../lib/bower/scss/foundation/foundation/pagination",
+  "../../lib/bower/scss/foundation/foundation/panels",
+  "../../lib/bower/scss/foundation/foundation/pricing-tables",
+  "../../lib/bower/scss/foundation/foundation/progress-bars",
+  "../../lib/bower/scss/foundation/foundation/reveal",
+  "../../lib/bower/scss/foundation/foundation/side-nav",
+  "../../lib/bower/scss/foundation/foundation/split-buttons",
+  "../../lib/bower/scss/foundation/foundation/sub-nav",
+  "../../lib/bower/scss/foundation/foundation/switch",
+  "../../lib/bower/scss/foundation/foundation/tables",
+  "../../lib/bower/scss/foundation/foundation/tabs",
+  "../../lib/bower/scss/foundation/foundation/thumbs",
+  "../../lib/bower/scss/foundation/foundation/tooltips",
+  "../../lib/bower/scss/foundation/foundation/offcanvas",
+  "../../lib/bower/scss/foundation/foundation/visibility";
+
+
+//foundation
+//@import "functions";
+//@import "settings";
+
 @import "first";
 @import "second";
