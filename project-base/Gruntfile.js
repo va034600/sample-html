@@ -37,10 +37,10 @@ module.exports = function(grunt) {
         bower: {
             install: {
                 options: {
-                    targetDir: 'public/private/src/lib/js',
+                    targetDir: 'public/private/src/lib/bower',
                     layout: 'byType',
                     verbose: false, // ログの詳細を出すかどうか
-                    cleanTargetDir: false, // targetDirを削除するかどうか
+                    cleanTargetDir: true, // targetDirを削除するかどうか
                     cleanBowerDir: false // bowerのcomponentsディレクトリを削除するかどうか
                 }
             }

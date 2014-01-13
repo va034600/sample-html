@@ -12,11 +12,11 @@ var require = {
 		}
 	},
 	paths : {
-		'jquery' : '../../lib/js/jquery/jquery',
-		'underscore' : '../../lib/js/underscore/underscore',
-		'backbone' : '../../lib/js/backbone/backbone',
-		'text' : '../../lib/js/require_text/text',
-		'i18n' : '../../lib/js/require_i18n/i18n'
+		'jquery' : '../../lib/bower/js/jquery/jquery',
+		'underscore' : '../../lib/bower/js/underscore/underscore',
+		'backbone' : '../../lib/bower/js/backbone/backbone',
+		'text' : '../../lib/manual/js/require_text/text',
+		'i18n' : '../../lib/manual/js/require_i18n/i18n'
 	},
 	urlArgs : 'bust=' + (new Date()).getTime()
 };
