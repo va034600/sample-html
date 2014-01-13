@@ -1,5 +1,14 @@
-インストール手順
+前提
+・ruby
+・npm
+・grunt
+・sass
+・compass
+
+起動手順
+・プロジェクトのroot移動
 ・npm install
+・grunt (各種コマンド)
 
 gruntコマンド
 ・grunt watch
@@ -36,7 +45,6 @@ gruntコマンド
 	jsを静的チェックしてくれる。
 
 
-
 connect
 LiveReload
 sass compass
@@ -50,8 +58,3 @@ backbone.js
 	text
 	model
 	i18n
-
-
-
-
-
