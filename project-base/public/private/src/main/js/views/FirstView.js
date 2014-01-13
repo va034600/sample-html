@@ -3,12 +3,14 @@ define([
 	"underscore",
 	"backbone",
 	"text!../../html/first-view.html",
+	"i18n!nls/Messages",
 	"models/UserCollection"
 ],function(
 	$,
 	_,
 	Backbone,
 	templateHtml,
+	Messages,
 	UserCollection
 ){
 	var Result = Backbone.View.extend({
@@ -31,7 +33,7 @@ define([
 			this.options.userCollection.each(function(model) {
 				this.$('.notes').append(template1({
 					model:model,
-					sample:"abc"
+					sample:Messages.first.message
 				}));
 			});
 			return this;
