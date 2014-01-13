@@ -31,6 +31,8 @@ gruntコマンド
 ・grunt mincompass
 	compassとmincompassを実行する。
 
+・grunt jshint
+	jsを静的チェックしてくれる。
 
 
 
