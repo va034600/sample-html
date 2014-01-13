@@ -101,6 +101,5 @@ module.exports = function(grunt) {
     }
 
     grunt.registerTask('compassmin', ['compass', 'cssmin']);
-    grunt.registerTask('upwatch', ['connect', 'watch']);
-    grunt.registerTask('default', ['upwatch']);
+    grunt.registerTask('default', ['connect', 'watch']);
 };

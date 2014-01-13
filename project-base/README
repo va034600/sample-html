@@ -10,8 +10,9 @@ gruntコマンド
 
 ・grunt connect
 	ローカルにサーバを立ち上げる。
+	http://localhost:8000
 
-・grunt upwatch
+・grunt
 	watchとconnectを行う。
 
 ・grunt bower
