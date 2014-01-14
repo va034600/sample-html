@@ -33,9 +33,7 @@
       "js": "**/modernizr.js"
     },
     "foundation": {
-      "js": "**/js/foundation.js",
-      "scss":"**/foundation/*.scss",
-      "scss/foundation":"**/components/*.scss"
+      "js": "**/js/foundation.js"
     },
     "normalize-scss": {
       "scss":"**/*.scss"
