@@ -33,7 +33,7 @@
       "js": "**/modernizr.js"
     },
     "foundation": {
-      "js": "**/foundation.js",
+      "js": "**/js/foundation.js",
       "scss":"**/foundation/*.scss",
       "scss/foundation":"**/components/*.scss"
     },
