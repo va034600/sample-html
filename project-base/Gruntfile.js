@@ -93,8 +93,7 @@ module.exports = function(grunt) {
 
     var pkg = grunt.file.readJSON('package.json');
 
-    var devDependencies;
-    for (devDependencie in pkg.devDependencies) {
+    for (var devDependencie in pkg.devDependencies) {
         if (devDependencie.substring(0, 6) == 'grunt-') {
             grunt.loadNpmTasks(devDependencie);
         }
