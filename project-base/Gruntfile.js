@@ -13,7 +13,7 @@ module.exports = function(grunt) {
             options: {
                 livereload: true
             },
-            css: {
+            scss: {
                 files: [
                     'public/private/src/main/scss/**/*.scss',
                 ],
