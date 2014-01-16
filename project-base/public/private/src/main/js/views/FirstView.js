@@ -2,7 +2,7 @@ define([
 	"jquery",
 	"underscore",
 	"backbone",
-	"text!../../html/first-view.html",
+	"text!../../html/first.html",
 	"i18n!nls/Messages",
 	"models/UserCollection"
 ],function(

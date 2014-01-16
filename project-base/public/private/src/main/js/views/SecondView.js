@@ -2,7 +2,7 @@ define([
 	"jquery",
 	"underscore",
 	"backbone",
-	"text!../../html/second-view.html",
+	"text!../../html/second.html",
 	"models/UserModel"
 ],function(
 	$,

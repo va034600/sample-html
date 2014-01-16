@@ -2,7 +2,7 @@ define([
 	"jquery",
 	"underscore",
 	"backbone",
-	"text!../../html/index-view.html",
+	"text!../../html/index.html",
 ],function(
 	$,
 	_,
