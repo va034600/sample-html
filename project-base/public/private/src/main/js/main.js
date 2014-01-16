@@ -1,13 +1,18 @@
 require([
 	"foundation",
 	"BaseSync",
-	"routers/MainRouter"
+	"routers/MainRouter",
+	"views/HeaderView"
 ], function(
 	foundation,
 	BaseSync,
-	MainRouter
+	MainRouter,
+	HeaderView
 ) {
 	$(document).foundation();
+
 	new MainRouter();
 	Backbone.history.start();
+
+	$("#header").html(new HeaderView().el);
 });
