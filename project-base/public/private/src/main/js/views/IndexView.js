@@ -13,7 +13,8 @@ define([
 		template : _.template(templateHtml),
 		events : {
 			"click .first-button" : "onClickByFirstButton",
-			"click .second-button" : "onClickBySecondButton"
+			"click .second-button" : "onClickBySecondButton",
+			"click .third-button" : "onClickByThirdButton"
 		},
 		initialize : function() {
 			this.render();
@@ -29,6 +30,11 @@ define([
 		},
 		onClickBySecondButton:function(event){
 			Backbone.history.navigate("second", {
+				trigger : true
+			});
+		},
+		onClickByThirdButton:function(event){
+			Backbone.history.navigate("third", {
 				trigger : true
 			});
 		}

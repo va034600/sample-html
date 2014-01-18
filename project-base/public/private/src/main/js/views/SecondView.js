@@ -31,7 +31,7 @@ define([
 			return this;
 		},
 		onClickByMoveButton:function(event){
-			Backbone.history.navigate("index", {
+			Backbone.history.navigate("third", {
 				trigger : true
 			});
 		}

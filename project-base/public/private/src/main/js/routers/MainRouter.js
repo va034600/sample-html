@@ -4,14 +4,16 @@ define([
 	"backbone",
 	"views/IndexView",
 	"views/FirstView",
-	"views/SecondView"
+	"views/SecondView",
+	"views/ThirdView"
 ],function(
 	$,
 	_,
 	Backbone,
 	IndexView,
 	FirstView,
-	SecondView
+	SecondView,
+	ThirdView
 ){
 	var Result = Backbone.Router.extend({
 		routes: {
@@ -19,6 +21,7 @@ define([
 			"index" : "index",
 			"first" : "first",
 			"second" : "second",
+			"third" : "third"
 		},
 		index: function () {
 			$("#mainContent").html(new IndexView().el);
@@ -28,6 +31,9 @@ define([
 		},
 		second: function () {
 			$("#mainContent").html(new SecondView().el);
+		},
+		third: function () {
+			$("#mainContent").html(new ThirdView().el);
 		}
 	});
 
