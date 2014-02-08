@@ -1,17 +1,24 @@
 var require = {
 	shim : {
 		'jquery' : {
-			exports : ['$']
+			exports : [ '$' ]
 		},
 		'underscore' : {
 			exports : '_'
 		},
 		'backbone' : {
-			deps : ['underscore', 'jquery'],
+			deps : [ 'underscore', 'jquery' ],
 			exports : 'Backbone'
 		},
 		'foundation' : {
-			deps : ['modernizr', 'jquery']
+			deps : [ 'jquery', 'jquery_cookie', 'fastclick',
+					'jquery_placeholder', 'lodash' ]
+		},
+		'jquery_cookie' : {
+			deps : [ 'jquery' ]
+		},
+		'jquery_placeholder' : {
+			deps : [ 'jquery' ]
 		}
 	},
 	paths : {
@@ -21,7 +28,10 @@ var require = {
 		'text' : '../../lib/manual/js/require_text/text',
 		'i18n' : '../../lib/manual/js/require_i18n/i18n',
 		'foundation' : '../../lib/bower/js/foundation/foundation',
-		'modernizr' : '../../lib/bower/js/modernizr/modernizr'
+		'fastclick' : '../../lib/bower/js/fastclick/fastclick',
+		'jquery_cookie' : '../../lib/bower/js/jquery.cookie/jquery.cookie',
+		'jquery_placeholder' : '../../lib/bower/js/jquery-placeholder/jquery.placeholder',
+		'lodash' : '../../lib/bower/js/lodash/lodash.compat'
 	},
 	urlArgs : 'bust=' + (new Date()).getTime()
 };
