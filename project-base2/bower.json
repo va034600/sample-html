@@ -25,7 +25,6 @@
       "js": "angular.js"
     },
     "bootstrap-sass-official": {
-      "font": "vendor/assets/fonts/**/*.*",
       "scss": "vendor/assets/stylesheets/**/*.scss",
       "js": "vendor/assets/javascripts/**/*.js"
     },
