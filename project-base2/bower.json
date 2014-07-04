@@ -1,0 +1,26 @@
+{
+  "name": "project-base2",
+  "version": "1.0.0",
+  "main": "index.js",
+
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components"
+  ],
+
+  "dependencies": {
+    "jquery": "2.1.0",
+    "angular": "v1.2.19"
+  },
+  
+
+  "exportsOverride": {
+    "jquery": {
+      "js": "dist/jquery.js"
+    },
+    "angular": {
+      "js": "angular.js"
+    }
+  }
+}
