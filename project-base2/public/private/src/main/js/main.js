@@ -1,2 +1,2 @@
-require(['angular', "controllers"],function(angular) {
+require(['angular', "controllers/HelloController"],function(angular) {
 });
