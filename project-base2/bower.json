@@ -6,14 +6,16 @@
   "ignore": [
     "**/.*",
     "node_modules",
-    "components"
+    "components",
+    "vendor/assets/stylesheets/bootstrap.scss"
   ],
 
   "dependencies": {
     "jquery": "2.1.0",
-    "angular": "v1.2.19"
+    "angular": "v1.2.19",
+    "bootstrap-sass-official": "3.1.1",
+    "requirejs": "2.1.10"
   },
-  
 
   "exportsOverride": {
     "jquery": {
@@ -21,6 +23,13 @@
     },
     "angular": {
       "js": "angular.js"
+    },
+    "bootstrap-sass-official": {
+      "font": "vendor/assets/fonts/**/*.*",
+      "scss": "vendor/assets/stylesheets/**/*.scss",
+      "js": "vendor/assets/javascripts/**/*.js"
+    },
+    "requirejs":{
     }
   }
 }
