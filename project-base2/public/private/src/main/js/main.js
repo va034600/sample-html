@@ -3,8 +3,7 @@ define([
 	'angular',
 	"bootstrap",
 	"MyModule",
-	"routes",
-	"controllers/HelloController"
+	"routes"
 ], function (require, angular) {
 
 

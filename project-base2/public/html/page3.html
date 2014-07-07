@@ -1,6 +1,94 @@
-<div>
-	<div ng-controller='HelloController'>
-		<input ng-model='greeting.text'>
-		<p>{{greeting.text}}, World</p>
+<!-- Button trigger modal -->
+<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+	Launch demo modal
+</button>
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+				<h4 class="modal-title" id="myModalLabel">Modal title</h4>
+			</div>
+			<div class="modal-body">
+				...
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-primary">Save changes</button>
+			</div>
+		</div>
 	</div>
+</div>
+<br>
+<br>
+
+
+
+<div class="btn-group" data-toggle="buttons">
+	<label class="btn btn-primary active">
+		<input type="checkbox" checked> Option 1 (pre-checked)
+	</label>
+	<label class="btn btn-primary">
+		<input type="checkbox"> Option 2
+	</label>
+	<label class="btn btn-primary">
+		<input type="checkbox"> Option 3
+	</label>
+</div>
+<br>
+<br>
+
+
+
+
+<!-- Nav tabs -->
+<ul class="nav nav-tabs" role="tablist">
+	<li class="active"><a href="#home" role="tab" data-toggle="tab">Home</a></li>
+	<li><a href="#profile" role="tab" data-toggle="tab">Profile</a></li>
+	<li><a href="#messages" role="tab" data-toggle="tab">Messages</a></li>
+	<li><a href="#settings" role="tab" data-toggle="tab">Settings</a></li>
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-content">
+	<div class="tab-pane active" id="home">aa</div>
+	<div class="tab-pane" id="profile">bb</div>
+	<div class="tab-pane" id="messages">cc</div>
+	<div class="tab-pane" id="settings">dd</div>
+</div>
+
+
+
+
+
+
+
+
+<!-- Web Font -->
+<button type="button" class="btn btn-default btn-lg">
+	<span class="glyphicon glyphicon-star"></span> Star
+</button>
+
+
+
+
+
+<!-- Dropdown -->
+<div class="dropdown">
+	<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+		Dropdown
+		<span class="caret"></span>
+	</button>
+	<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+		<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
+		<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
+		<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
+		<li role="presentation" class="divider"></li>
+		<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
+	</ul>
 </div>

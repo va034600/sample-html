@@ -71,6 +71,6 @@ var require = {
 		"bootstrap_modal": "../../lib/bower/js/bootstrap-sass-official/modal",
 		"bootstrap_tooltip": "../../lib/bower/js/bootstrap-sass-official/tooltip",
 		"bootstrap_popover": "../../lib/bower/js/bootstrap-sass-official/popover"
-	}
-	//urlArgs: 'bust=' + (new Date()).getTime()
+	},
+	urlArgs: 'bust=' + (new Date()).getTime()
 };

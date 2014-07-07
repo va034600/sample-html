@@ -3,7 +3,7 @@ define([
 ], function (MyModule) {
 	'use strict';
 
-	MyModule.controller('HelloController', ['$scope', function ($scope) {
+	MyModule.controller('Page1Controller', ['$scope', function ($scope) {
 		$scope.greeting = { text: 'Hello' };
 	}]);
 });
