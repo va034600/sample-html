@@ -28,7 +28,8 @@ module.exports = function(grunt) {
             },
             html: {
                 files: [
-                    'public/private/src/main/html/**/*.html',
+					'public/private/src/main/html/**/*.html',
+					'public/html/**/*.html',
                     'public/index.html'
                 ],
                 tasks: []
