@@ -12,40 +12,40 @@ var require = {
 		"angular_route": {
 			"deps": ["angular"]
 		},
-		"bootstrap":{
+		"bootstrap": {
 			deps: [ "bootstrap_affix", "bootstrap_alert" , "bootstrap_button" , "bootstrap_carousel" , "bootstrap_dropdown" , "bootstrap_tab" , "bootstrap_transition" , "bootstrap_scrollspy" , "bootstrap_modal" , "bootstrap_tooltip" , "bootstrap_popover" ]
 		},
-		"bootstrap_affix":{
+		"bootstrap_affix": {
 			deps: [ "jquery" ]
 		},
-		"bootstrap_alert":{
+		"bootstrap_alert": {
 			deps: [ "jquery" ]
 		},
-		"bootstrap_button":{
+		"bootstrap_button": {
 			deps: [ "jquery" ]
 		},
-		"bootstrap_carousel":{
+		"bootstrap_carousel": {
 			deps: [ "jquery" ]
 		},
-		"bootstrap_dropdown":{
+		"bootstrap_dropdown": {
 			deps: [ "jquery" ]
 		},
-		"bootstrap_tab":{
+		"bootstrap_tab": {
 			deps: [ "jquery" ]
 		},
-		"bootstrap_transition":{
+		"bootstrap_transition": {
 			deps: [ "jquery" ]
 		},
-		"bootstrap_scrollspy":{
+		"bootstrap_scrollspy": {
 			deps: [ "jquery" ]
 		},
-		"bootstrap_modal":{
+		"bootstrap_modal": {
 			deps: [ "jquery" ]
 		},
-		"bootstrap_tooltip":{
+		"bootstrap_tooltip": {
 			deps: [ "jquery" ]
 		},
-		"bootstrap_popover":{
+		"bootstrap_popover": {
 			deps: [ "jquery", "bootstrap_tooltip" ]
 		}
 	},
@@ -61,16 +61,16 @@ var require = {
 		"bootstrap": "../../lib/bower/js/bootstrap-sass-official/bootstrap",
 		"bootstrap_affix": "../../lib/bower/js/bootstrap-sass-official/affix",
 
-		"bootstrap_alert" : "../../lib/bower/js/bootstrap-sass-official/alert",
-		"bootstrap_button" : "../../lib/bower/js/bootstrap-sass-official/button",
-		"bootstrap_carousel" : "../../lib/bower/js/bootstrap-sass-official/carousel",
-		"bootstrap_dropdown" : "../../lib/bower/js/bootstrap-sass-official/dropdown",
-		"bootstrap_tab" : "../../lib/bower/js/bootstrap-sass-official/tab",
-		"bootstrap_transition" : "../../lib/bower/js/bootstrap-sass-official/transition",
-		"bootstrap_scrollspy" : "../../lib/bower/js/bootstrap-sass-official/scrollspy",
-		"bootstrap_modal" : "../../lib/bower/js/bootstrap-sass-official/modal",
-		"bootstrap_tooltip" : "../../lib/bower/js/bootstrap-sass-official/tooltip",
-		"bootstrap_popover" : "../../lib/bower/js/bootstrap-sass-official/popover"
+		"bootstrap_alert": "../../lib/bower/js/bootstrap-sass-official/alert",
+		"bootstrap_button": "../../lib/bower/js/bootstrap-sass-official/button",
+		"bootstrap_carousel": "../../lib/bower/js/bootstrap-sass-official/carousel",
+		"bootstrap_dropdown": "../../lib/bower/js/bootstrap-sass-official/dropdown",
+		"bootstrap_tab": "../../lib/bower/js/bootstrap-sass-official/tab",
+		"bootstrap_transition": "../../lib/bower/js/bootstrap-sass-official/transition",
+		"bootstrap_scrollspy": "../../lib/bower/js/bootstrap-sass-official/scrollspy",
+		"bootstrap_modal": "../../lib/bower/js/bootstrap-sass-official/modal",
+		"bootstrap_tooltip": "../../lib/bower/js/bootstrap-sass-official/tooltip",
+		"bootstrap_popover": "../../lib/bower/js/bootstrap-sass-official/popover"
 	}
 	//urlArgs: 'bust=' + (new Date()).getTime()
 };

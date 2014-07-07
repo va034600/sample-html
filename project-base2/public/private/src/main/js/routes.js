@@ -1,35 +1,36 @@
 define(['MyModule'], function (app) {
-    'use strict';
+	'use strict';
 
-    return app.config(['$routeProvider', function ($routeProvider) {
+	return app.config(['$routeProvider', function ($routeProvider) {
 		$routeProvider.when('/view1', {
-			templateUrl: 'html/page1.html',
-			controller: function($scope, $location){
-			}
+			templateUrl: 'html/page1.html'
 		});
 		$routeProvider.when('/view2', {
 			templateUrl: 'html/page2.html',
-			controller: function($scope, $location){
+			controller: function ($scope, $location) {
 				$('nav.affix-nav').affix({
-					offset:{
+					offset: {
 						top: 300,
-						bottom:300
+						bottom: 300
 					}
 				}).on('affix.bs.affix', function () {
 					$(this).css({
 						'top': '0'
 					});
 					console.log('affix.bs.affix');
-				}).on('affixed.bs.affix', function(){
+				}).on('affixed.bs.affix', function () {
 					console.log('affixed.bs.affix');
-				}).on('affix-bottom.bs.affix', function(){
+				}).on('affix-bottom.bs.affix', function () {
 					console.log('affix-bottom.bs.affix');
-				}).on('affixed-bottom.bs.affix', function(){
+				}).on('affixed-bottom.bs.affix', function () {
 					console.log('affixed-bottom.bs.affix');
 				});
 
 				$('body').scrollspy({ target: 'nav.affix-nav' })
 			}
 		});
-    }]);
+		$routeProvider.when('/view3', {
+			templateUrl: 'html/page3.html'
+		});
+	}]);
 });
