@@ -6,6 +6,12 @@ var require = {
 		"angular": {
 			"exports": "angular"
 		},
+		"angular_resource": {
+			"deps": ["angular"]
+		},
+		"angular_route": {
+			"deps": ["angular"]
+		},
 		"bootstrap":{
 			deps: [ "bootstrap_affix", "bootstrap_alert" , "bootstrap_button" , "bootstrap_carousel" , "bootstrap_dropdown" , "bootstrap_tab" , "bootstrap_transition" , "bootstrap_scrollspy" , "bootstrap_modal" , "bootstrap_tooltip" , "bootstrap_popover" ]
 		},
@@ -41,13 +47,14 @@ var require = {
 		},
 		"bootstrap_popover":{
 			deps: [ "jquery", "bootstrap_tooltip" ]
-		},
-		'main':{
 		}
 	},
+	"priority": ["angular"],
 	"paths": {
 		'jquery': '../../lib/bower/js/jquery/jquery',
 		"angular": "../../lib/bower/js/angular/angular",
+		"angular_resource": "../../lib/bower/js/angular-resource/angular-resource",
+		"angular_route": "../../lib/bower/js/angular-route/angular-route",
 		"bootstrap": "../../lib/bower/js/bootstrap-sass-official/bootstrap",
 		"bootstrap_affix": "../../lib/bower/js/bootstrap-sass-official/affix",
 
@@ -61,6 +68,6 @@ var require = {
 		"bootstrap_modal" : "../../lib/bower/js/bootstrap-sass-official/modal",
 		"bootstrap_tooltip" : "../../lib/bower/js/bootstrap-sass-official/tooltip",
 		"bootstrap_popover" : "../../lib/bower/js/bootstrap-sass-official/popover"
-	},
-	urlArgs: 'bust=' + (new Date()).getTime()
+	}
+	//urlArgs: 'bust=' + (new Date()).getTime()
 };
