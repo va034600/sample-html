@@ -32,5 +32,8 @@ define(['MyModule'], function (app) {
 		$routeProvider.when('/view3', {
 			templateUrl: 'html/page3.html'
 		});
+		$routeProvider.when('/view4', {
+			templateUrl: 'html/page4.html'
+		});
 	}]);
 });
