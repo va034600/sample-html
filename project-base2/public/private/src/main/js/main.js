@@ -9,7 +9,7 @@ define(['require', 'angular', "bootstrap", "MyModule", "routes", "controllers/He
 
  
 
-	require(['requirejs_domready!'], function (document) {
+	require(['domReady!'], function (document) {
 		angular.bootstrap(document, ['myApp']);
 
 		$('nav.affix-nav').affix({

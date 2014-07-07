@@ -52,10 +52,12 @@ var require = {
 	"priority": ["angular"],
 	"paths": {
 		'jquery': '../../lib/bower/js/jquery/jquery',
-		'requirejs_domready': '../../lib/manual/js/requirejs-domready/domReady',
+		'domReady': '../../lib/manual/js/requirejs-domready/domReady',
+
 		"angular": "../../lib/bower/js/angular/angular",
 		"angular_resource": "../../lib/bower/js/angular-resource/angular-resource",
 		"angular_route": "../../lib/bower/js/angular-route/angular-route",
+
 		"bootstrap": "../../lib/bower/js/bootstrap-sass-official/bootstrap",
 		"bootstrap_affix": "../../lib/bower/js/bootstrap-sass-official/affix",
 
