@@ -1,5 +1,6 @@
 define([
-	'angular'
+	'angular',
+	"angular_route"
 ], function (angular) {
 	'use strict';
 

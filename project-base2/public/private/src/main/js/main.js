@@ -1,4 +1,4 @@
-define(['angular', "angular_route", "controllers/HelloController", "bootstrap"],function(angular) {
+define(['require', 'angular', "bootstrap", "MyModule", "routes", "controllers/HelloController"],function(require, angular) {
 
 
 
@@ -9,7 +9,7 @@ define(['angular', "angular_route", "controllers/HelloController", "bootstrap"],
 
  
 
-	require(['requirejs_domready!', "routes"], function (document) {
+	require(['requirejs_domready!'], function (document) {
 		angular.bootstrap(document, ['myApp']);
 
 		$('nav.affix-nav').affix({
