@@ -2,10 +2,10 @@ define([
 	'MyModule',
 	"controllers/Page1Controller",
 	"controllers/Page2Controller"
-], function (app) {
+], function (MyModule) {
 	'use strict';
 
-	return app.config(['$routeProvider', function ($routeProvider) {
+	return MyModule.config(['$routeProvider', function ($routeProvider) {
 		$routeProvider.when('/view1', {
 			templateUrl: 'html/page1.html'
 		});
