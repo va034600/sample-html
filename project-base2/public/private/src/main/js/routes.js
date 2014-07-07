@@ -19,5 +19,6 @@ define([
 		$routeProvider.when('/view4', {
 			templateUrl: 'html/page4.html'
 		});
+		$routeProvider.otherwise({redirectTo: '/view1'});
 	}]);
 });
