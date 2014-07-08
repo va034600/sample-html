@@ -5,7 +5,9 @@ define([
 ], function (MyModule) {
 	'use strict';
 
-	return MyModule.config(['$routeProvider', function ($routeProvider) {
+	return MyModule.config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
+		//$locationProvider.html5Mode(true);
+
 		$routeProvider.when('/view1', {
 			templateUrl: 'html/page1.html'
 		});
