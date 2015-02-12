@@ -1,0 +1,34 @@
+{
+	"name": "sample_typescript",
+	"version": "1.0.0",
+
+	"ignore": [
+		"**/.*",
+		"node_modules",
+		"components"
+	],
+
+	"dependencies": {
+		"jquery": "2.1.1",
+		"backbone": "1.1.2",
+		"underscore": "1.5.2",
+		"text": "2.0.13"
+	},
+	"devDependencies": {
+	},
+
+	"exportsOverride": {
+		"jquery": {
+			"js": "dist/jquery.js"
+		},
+		"backbone": {
+			"js": "backbone.js"
+		},
+		"underscore": {
+			"js": "underscore.js"
+		},
+		"text": {
+			"js": "text.js"
+		}
+	}
+}

@@ -1,0 +1,23 @@
+必須アプリケーションインストール一覧
+$ brew install npm
+$ npm install -g grunt-cli
+$ npm install -g bower
+$ sudo gem install gem install sass
+$ sudo gem install compass
+$ npm install -g typescript
+$ npm install -g tsd
+
+インストール確認
+$ ruby -v
+$ node -v
+$ npm -v
+$ grunt -V
+$ sass -v
+$ tsc -v
+
+$ cd root
+$ npm install
+
+grunt bower
+grunt requirejs
+grunt tsd

@@ -1,0 +1,21 @@
+{
+  "version": "v4",
+  "repo": "borisyankov/DefinitelyTyped",
+  "ref": "master",
+  "path": "src/lib/tsd",
+  "bundle": "src/lib/tsd/tsd.d.ts",
+  "installed": {
+    "backbone/backbone.d.ts": {
+      "commit": "cf7c97b2a68a385c98c75fb6edd81083c97c983c"
+    },
+    "underscore/underscore.d.ts": {
+      "commit": "cf7c97b2a68a385c98c75fb6edd81083c97c983c"
+    },
+    "requirejs/require.d.ts": {
+      "commit": "cf7c97b2a68a385c98c75fb6edd81083c97c983c"
+    },
+    "jquery/jquery.d.ts": {
+      "commit": "cf7c97b2a68a385c98c75fb6edd81083c97c983c"
+    }
+  }
+}
