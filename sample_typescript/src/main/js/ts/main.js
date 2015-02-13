@@ -2,8 +2,9 @@
 require([
     'jquery',
     'backbone',
-    'aaa/Abc'
-], function ($, Backbone, Abc) {
+    'aaa/AbcView'
+], function ($, Backbone, AbcView) {
     Backbone.history.start();
+    $("#container-wrap-box").append(new AbcView.AbcView().el);
 });
 //# sourceMappingURL=main.js.map

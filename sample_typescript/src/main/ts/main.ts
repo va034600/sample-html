@@ -3,11 +3,13 @@
 require([
     'jquery',
     'backbone',
-    'aaa/Abc'
+    'aaa/AbcView'
 ], (
     $,
     Backbone,
-    Abc
+    AbcView
 ) => {
     Backbone.history.start();
+
+    $("#container-wrap-box").append(new AbcView.AbcView().el);
 });
