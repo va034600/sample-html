@@ -22,6 +22,8 @@ var require = {
 		"underscore" : '../../../lib/bower/js/underscore/underscore',
 		"backbone" : '../../../lib/bower/js/backbone/backbone',
 		"text": '../../../lib/bower/js/text/text',
+		"handlebars": '../../../lib/bower/js/handlebars/handlebars',
+		"hbs": '../../../lib/manual/js/require-handlebars-plugin/hbs',
 
 		//local
 		"main": "main"

@@ -2,8 +2,12 @@
 
 require([
     'jquery',
-    'backbone'
-], ($, Backbone) => {
+    'backbone',
+    'aaa/Abc'
+], (
+    $,
+    Backbone,
+    Abc
+) => {
     Backbone.history.start();
-    alert("a");
 });

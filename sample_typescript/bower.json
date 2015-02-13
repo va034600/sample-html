@@ -12,7 +12,9 @@
 		"jquery": "2.1.1",
 		"backbone": "1.1.2",
 		"underscore": "1.5.2",
-		"text": "2.0.13"
+		"text": "2.0.13",
+        "handlebars": "3.0.0",
+        "require-handlebars-plugin": "0.8.1"
 	},
 	"devDependencies": {
 	},
@@ -29,6 +31,11 @@
 		},
 		"text": {
 			"js": "text.js"
-		}
+		},
+        "handlebars":{
+            "js": "handlebars.js"
+        },
+        "require-handlebars-plugin":{
+        }
 	}
 }

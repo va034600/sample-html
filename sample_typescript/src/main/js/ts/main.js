@@ -1,9 +1,9 @@
 /// <reference path="../../lib/tsd/tsd.d.ts" />
 require([
     'jquery',
-    'backbone'
-], function ($, Backbone) {
+    'backbone',
+    'aaa/Abc'
+], function ($, Backbone, Abc) {
     Backbone.history.start();
-    alert("a");
 });
 //# sourceMappingURL=main.js.map
