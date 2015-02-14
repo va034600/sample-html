@@ -1,6 +1,6 @@
 {
 	"name": "sample_typescript",
-	"version": "1.0.0",
+	"version": "1.0.1",
 
 	"ignore": [
 		"**/.*",
@@ -12,7 +12,6 @@
 		"jquery": "2.1.1",
 		"backbone": "1.1.2",
 		"underscore": "1.5.2",
-		"text": "2.0.13",
         "handlebars": "3.0.0",
         "require-handlebars-plugin": "0.8.1"
 	},
@@ -28,9 +27,6 @@
 		},
 		"underscore": {
 			"js": "underscore.js"
-		},
-		"text": {
-			"js": "text.js"
 		},
         "handlebars":{
             "js": "handlebars.js"
