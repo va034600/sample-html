@@ -4,7 +4,7 @@
 import Backbone = require('backbone');
 import DefView = require('aaa/DefView');
 
-var hbs = require('hbs!../../../html/aaa/abc');
+var hbs:Function = require('hbs!../../../html/aaa/abc');
 
 export class AbcView extends Backbone.View<Backbone.Model> {
     template: (data: any) => string;

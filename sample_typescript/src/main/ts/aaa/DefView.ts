@@ -3,7 +3,7 @@
 
 import Backbone = require('backbone');
 
-var hbs = require('hbs!../../../html/aaa/def');
+var hbs:Function = require('hbs!../../../html/aaa/def');
 
 export class DefView extends Backbone.View<Backbone.Model> {
     template: (data: any) => string;

@@ -12,7 +12,6 @@ define(["require", "exports", 'backbone', 'aaa/DefView', "hbs!../../../html/aaa/
         __extends(AbcView, _super);
         function AbcView(options) {
             _super.call(this, options);
-            //noinspection JSValidateTypes
             this.template = _.template(hbs());
             this.render();
         }
