@@ -50,6 +50,22 @@ module.exports = function (grunt) {
 				}
 			}
 		},
+		tsd: {
+			refresh: {
+				options: {
+					// execute a command
+					command: 'reinstall',
+					//optional: always get from HEAD
+					latest: true,
+					// specify config file
+					config: 'tsd.json',
+					// experimental: options to pass to tsd.API
+					opts: {
+						// props from tsd.Options
+					}
+				}
+			}
+		},
 		compass: {
 			dev: {
 				options: {
@@ -94,22 +110,6 @@ module.exports = function (grunt) {
 
 					//out
 					out: "../public/javascripts/main.min.js"
-				}
-			}
-		},
-		tsd: {
-			refresh: {
-				options: {
-					// execute a command
-					command: 'reinstall',
-					//optional: always get from HEAD
-					latest: true,
-					// specify config file
-					config: 'tsd.json',
-					// experimental: options to pass to tsd.API
-					opts: {
-						// props from tsd.Options
-					}
 				}
 			}
 		},
