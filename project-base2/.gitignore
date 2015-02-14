@@ -1,0 +1,11 @@
+node_modules
+components
+.sass-cache
+
+/.idea
+/.idea_modules
+/.classpath
+/.project
+/.settings
+/.target
+/bin

@@ -1,0 +1,37 @@
+{
+	"name": "sample_typescript",
+	"version": "1.0.1",
+
+	"ignore": [
+		"**/.*",
+		"node_modules",
+		"components"
+	],
+
+	"dependencies": {
+		"jquery": "2.1.1",
+		"backbone": "1.1.2",
+		"underscore": "1.5.2",
+        "handlebars": "3.0.0",
+        "require-handlebars-plugin": "0.8.1"
+	},
+	"devDependencies": {
+	},
+
+	"exportsOverride": {
+		"jquery": {
+			"js": "dist/jquery.js"
+		},
+		"backbone": {
+			"js": "backbone.js"
+		},
+		"underscore": {
+			"js": "underscore.js"
+		},
+        "handlebars":{
+            "js": "handlebars.js"
+        },
+        "require-handlebars-plugin":{
+        }
+	}
+}
