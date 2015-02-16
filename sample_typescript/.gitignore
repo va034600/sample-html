@@ -18,3 +18,7 @@ dist
 /node_modules
 /bower_components
 /.sass-cache
+/.tscache
+/src/main/js/ts/.baseDir.js
+/src/main/js/ts/.baseDir.js.map
+/src/main/ts/.baseDir.ts

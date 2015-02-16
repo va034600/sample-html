@@ -39,15 +39,11 @@ module.exports = function (grunt) {
 				tasks: []
 			}
 		},
-		typescript: {
-			sourcemap: {
-				src: [ 'src/main/ts/**/*.ts' ],
-				dest: 'src/main/js/ts',
-				options: {
-					basePath: 'src/main/ts',
-					module: 'amd',
-					sourceMap:true
-				}
+		ts: {
+			default : {
+				src: ["src/main/ts/**/*.ts"],
+				outDir: "src/main/js/ts"
+				//out: "src/main/js/build/main.js"
 			}
 		},
 		tsd: {
