@@ -4,20 +4,20 @@ module.exports = {
   entry: './src/main.js',
   output: {
     path: __dirname,
-    filename: 'dist/build_main.js'
+    filename: 'webroot/dist/build_main.js'
   },
 
 
   // Configuration for dev server
-  devServer: {
-    port: 3000,
-    hot: true,
-    inline: true
-  },
+  // devServer: {
+  //   port: 3000,
+  //   hot: true,
+  //   inline: true
+  // },
 
-  plugins: [
-    new webpack.HotModuleReplacementPlugin(),
-  ]
+  // plugins: [
+  //   new webpack.HotModuleReplacementPlugin(),
+  // ]
 
 
 };

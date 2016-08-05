@@ -1,6 +1,7 @@
 必須アプリケーションインストール一覧
 $ brew install npm
 $ npm install webpack -g
+$ npm install -g browser-sync
 
 セットアップ
 $ cd ここ
@@ -22,6 +23,8 @@ http://localhost:3000/index.html
 
 サーバインストール
 $ npm install --save-dev webpack-dev-server
+$ npm install browser-sync --save-dev 
 
 jqueryをnpmでインストールする。
 $ npm install jquery --save
+
