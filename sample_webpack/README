@@ -13,3 +13,15 @@ $ webpack
 $ npm start
 
 http://localhost:3000/index.html
+
+
+
+
+
+参考
+
+サーバインストール
+$ npm install --save-dev webpack-dev-server
+
+jqueryをnpmでインストールする。
+$ npm install jquery --save
