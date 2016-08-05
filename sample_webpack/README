@@ -1,0 +1,15 @@
+必須アプリケーションインストール一覧
+$ brew install npm
+$ npm install webpack -g
+
+セットアップ
+$ cd ここ
+$ npm install
+
+ビルド
+$ webpack
+
+サーバ起動
+$ npm start
+
+http://localhost:3000/index.html
