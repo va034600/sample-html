@@ -3,6 +3,6 @@ const webpack = require('webpack');
 module.exports = {
   entry: './src/js/main.js',
   output: {
-        filename: 'build_main.js'
+        filename: '[name].js'
   }
 };

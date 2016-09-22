@@ -7,19 +7,11 @@ module.exports = {
 
   // jsのビルド設定
   js: {
-    src: src + '/js/**',
-    dest: dest + '/js',
-    uglify: false
+    dest: dest + '/js'
   },
 
   // webpackの設定
   webpack: {
-    entry: src + '/js/main.js',
-    output: {
-        filename: '[name].js'
-    },
-    resolve: {
-      extensions: ['', '.js']
-    }
+    entry: src + '/js/main.js'
   }
 }
