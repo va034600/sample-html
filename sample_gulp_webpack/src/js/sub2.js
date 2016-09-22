@@ -1,6 +1,7 @@
 define([
-], function () {
+	"jquery"
+], function ($) {
 	'use strict';
 
-	return "aaaa3";
+	return $("#test-box").html() + ":aaaa3";
 });
