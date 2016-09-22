@@ -16,7 +16,7 @@ module.exports = {
   webpack: {
     entry: src + '/js/main.js',
     output: {
-      filename: 'bundle.js'
+        filename: '[name].js'
     },
     resolve: {
       extensions: ['', '.js']
