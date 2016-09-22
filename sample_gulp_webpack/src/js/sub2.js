@@ -1,7 +1,10 @@
 define([
-	"jquery"
-], function ($) {
+	"jquery",
+	"underscore2"
+], function ($, _) {
 	'use strict';
 
-	return $("#test-box").html() + ":aaaa3";
+	var no = _.last([5, 4, 3, 2, 1112]); 
+
+	return $("#test-box").html() + ":aaaa-" + no;
 });
