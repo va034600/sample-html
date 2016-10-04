@@ -1,7 +1,6 @@
 必須アプリケーションインストール一覧
 $ brew install npm
 $ npm install webpack -g
-$ npm install -g browser-sync
 
 セットアップ
 $ cd ここ
