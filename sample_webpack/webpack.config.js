@@ -1,23 +1,28 @@
 const webpack = require('webpack');
+var path = require('path');
 
 module.exports = {
-  entry: './src/main.js',
+    cache: true,
+    entry: {
+        app: [
+            "webpack-dev-server/client?http://localhost:8080",
+            "webpack/hot/dev-server",
+            './src/main.js',
+        ]},
   output: {
-    path: __dirname,
-    filename: 'webroot/dist/build_main.js'
+    path: path.join(__dirname, 'dist'),
+    filename: 'build_main.js',
+    publicPath: "/public/"
+  },
+  devServer: {
+    contentBase: 'webroot',
+    port: 3000,
+    hot: true
   },
 
-
-  // Configuration for dev server
-  // devServer: {
-  //   port: 3000,
-  //   hot: true,
-  //   inline: true
-  // },
-
-  // plugins: [
-  //   new webpack.HotModuleReplacementPlugin(),
-  // ]
+  plugins: [
+    new webpack.HotModuleReplacementPlugin()
+  ]
 
 
 };
