@@ -5,7 +5,7 @@ module.exports = {
     cache: true,
     entry: {
         app: [
-            "webpack-dev-server/client?http://localhost:8080",
+            "webpack-dev-server/client?http://localhost:3000",
             "webpack/hot/dev-server",
             './src/main.js',
         ]},
