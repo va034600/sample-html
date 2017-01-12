@@ -1,6 +1,8 @@
 {
   "name": "sample-react",
   "dependencies": {
+  },
+  "globalDependencies": {
     "core-js": "registry:dt/core-js#0.9.7+20161130133742",
     "react": "registry:dt/react#0.14.0+20161008064207",
     "react-dom": "registry:dt/react-dom#0.14.0+20160412154040",
@@ -10,7 +12,6 @@
     "whatwg-fetch": "registry:dt/whatwg-fetch#0.0.0+20161120230953",
     "whatwg-streams": "registry:dt/whatwg-streams#0.0.0+20161214010628"
   },
-  "globalDependencies": {},
   "resolution": {
     "main": "src/lib/tsd"
   }
