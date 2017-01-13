@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "devDependencies": {
+    "@types/react": "^15.0.0",
+    "@types/react-dom": "^0.14.20",
+    "@types/react-redux": "^4.4.35",
+    "@types/redux": "^3.6.0",
     "gulp": "^3.9.1",
     "gulp-cssimport": "~3.1.0",
     "gulp-if": "^2.0.1",
