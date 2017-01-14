@@ -58,11 +58,27 @@ class MainFormComponent extends React.Component<Props2, {}> {
     render() {
         const { handleSubmit } = this.props;
 
+        const required = value => value ? undefined : 'Required'
+        const maxLength = max => value =>
+            value && value.length > max ? `Must be ${max} characters or less` : undefined
+        const maxLength15 = maxLength(15)
+        const number = value => value && isNaN(Number(value)) ? 'Must be a number' : undefined
+
+        const renderField = ({ input, label, type, meta: { touched, error, warning } }) => (
+            <div>
+                <label>{label}</label>
+                <div>
+                    <input {...input} placeholder={label} type={type}/>
+                    {touched && ((error && <span>{error}</span>) || (warning && <span>{warning}</span>))}
+                </div>
+            </div>
+        )
+
         return (
             <form onSubmit={handleSubmit}>
                 <div>
                     <label htmlFor="firstName">First Name</label>
-                    <Field name="firstName" component="input" type="text"/>
+                    <Field name="firstName" component={renderField} type="text" validate={[ required, maxLength15 ]}/>
                 </div>
                 <div>
                     <label htmlFor="lastName">Last Name</label>
