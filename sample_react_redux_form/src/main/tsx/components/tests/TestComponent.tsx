@@ -1,6 +1,6 @@
 import * as React from "react";
 import {connect} from "react-redux";
-import {Field, reduxForm , reducer as formReducer, FormProps} from 'redux-form'
+import {Field, reduxForm, reducer as formReducer, FormProps, DataShape} from 'redux-form'
 
 import {TestGlobalState} from "../../states/tests/TestGlobalState";
 import {fetchTest} from "../../actions/tests/TestActions";
@@ -32,14 +32,15 @@ class TargetComponent extends React.Component<Props, {}> {
     }
 }
 
-interface MainFormData extends FormData{
-    firstName?:string;
-    lastName?:string;
-    favoriteColor?:string;
-    // email?:string;
-}
+// interface MainDataShape extends DataShape{
+//     firstName?:string;
+//     lastName?:string;
+//     email?:string;
+//     favoriteColor?:string;
+// }
 
-interface Props2 extends FormProps<MainFormData, any, any>{
+// interface Props2 extends FormProps<MainDataShape, any, any>{
+interface Props2{
     value: TestGlobalState;
     dispatch: Redux.Dispatch<any>;
 };
@@ -66,6 +67,10 @@ class MainFormComponent extends React.Component<Props2, {}> {
 
         return (
             <form onSubmit={handleSubmit(this.submitAbc)}>
+                <Field name="username" type="text"
+                       component={renderField} label="Username"
+                       validate={[ required, maxLength15 ]}
+                />
                 <div>
                     <label htmlFor="firstName">First Name</label>
                     <Field name="firstName" component="input" type="text"/>
@@ -122,6 +127,7 @@ class MainFormComponent extends React.Component<Props2, {}> {
 
     submitAbc(values) {
         console.log(values);
+        alert("do submit");
     }
 }
 

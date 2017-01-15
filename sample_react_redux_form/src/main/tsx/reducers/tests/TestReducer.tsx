@@ -15,8 +15,10 @@ const initialState:TestGlobalState = {
 };
 
 export function test6Reducer(state: TestGlobalState = initialState, action: TestAction): TestGlobalState {
-    // console.log(action.firstName);
+    console.log(action.type);
     switch (action.type) {
+        case "FETCH":
+            return state;
         default:
             return state
     }
