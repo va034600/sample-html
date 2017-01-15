@@ -36,7 +36,8 @@ interface MainDataShape{
 }
 
 interface Props2 extends FormProps<MainDataShape, any, any>{
-    value: TestGlobalState;
+    // value: TestGlobalState;
+    initialValues: any
     dispatch: Redux.Dispatch<any>;
 };
 
@@ -135,7 +136,10 @@ class MainFormComponent extends React.Component<Props2, {}> {
 
 function mapStateToProps(state) {
     return {
-        value: state.test6Reducer
+        // value: state.test6Reducer
+        initialValues: {
+            firstName:"tttt"
+        }
     };
 }
 
