@@ -3,14 +3,14 @@ import {TestGlobalState} from "../../states/tests/TestGlobalState";
 
 export interface TestAction {
     type: string;
-    data:any;
-    // firstName?:string;
+    // data:any;
+    firstName:string;
     // lastName?:string;
     // email?:string;
 }
 
 const initialState:TestGlobalState = {
-    // firstName:null,
+    firstName:"ok va"
     // lastName:null,
     // email:null
 };
@@ -19,9 +19,8 @@ export function test6Reducer(state: TestGlobalState = initialState, action: Test
     console.log(action.type);
     switch (action.type) {
         case 'redux-form-examples/account/LOAD':
-            console.log(action.data);
             return {
-                data: action.data
+                firstName:action.firstName
             }
         case "FETCH":
             return state;

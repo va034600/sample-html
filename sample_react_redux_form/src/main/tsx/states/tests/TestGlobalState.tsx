@@ -1,5 +1,5 @@
 export interface TestGlobalState {
-    // firstName?:string;
+    firstName:string;
     // lastName?:string;
     // email?:string;
 }

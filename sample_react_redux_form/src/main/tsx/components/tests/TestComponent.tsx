@@ -138,7 +138,7 @@ function mapStateToProps(state) {
     return {
         // value: state.test6Reducer
         initialValues: {
-            firstName:"tttt"
+            firstName:state.test6Reducer.firstName
         }
     };
 }
