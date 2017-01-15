@@ -5,12 +5,7 @@ import {Field, reduxForm, reducer as formReducer, FormProps, DataShape} from 're
 import {TestGlobalState} from "../../states/tests/TestGlobalState";
 import {fetchTest} from "../../actions/tests/TestActions";
 
-interface Props{
-    value: TestGlobalState;
-    dispatch: Redux.Dispatch<any>;
-}
-
-class TargetComponent extends React.Component<Props, {}> {
+class TargetComponent extends React.Component<{}, {}> {
     constructor(props) {
         super(props);
     }
@@ -139,6 +134,5 @@ function mapStateToProps(state) {
 
 export function test6(){
     return connect(
-        mapStateToProps
     )(TargetComponent);
 }
