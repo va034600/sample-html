@@ -45,6 +45,16 @@ interface Props2{
     dispatch: Redux.Dispatch<any>;
 };
 
+const renderField = ({ input, label, type, meta: { touched, error, warning } }) => (
+    <div>
+        <label>{label}</label>
+        <div>
+            <input {...input} placeholder={label} type={type}/>
+            {touched && ((error && <span>{error}</span>) || (warning && <span>{warning}</span>))}
+        </div>
+    </div>
+)
+
 class MainFormComponent extends React.Component<Props2, {}> {
     render() {
         const { error, handleSubmit, pristine, reset, submitting } = this.props;
@@ -54,16 +64,6 @@ class MainFormComponent extends React.Component<Props2, {}> {
             value && value.length > max ? `Must be ${max} characters or less` : undefined
         const maxLength15 = maxLength(15)
         const number = value => value && isNaN(Number(value)) ? 'Must be a number' : undefined
-
-        const renderField = ({ input, label, type, meta: { touched, error, warning } }) => (
-            <div>
-                <label>{label}</label>
-                <div>
-                    <input {...input} placeholder={label} type={type}/>
-                    {touched && ((error && <span>{error}</span>) || (warning && <span>{warning}</span>))}
-                </div>
-            </div>
-        )
 
         return (
             <form onSubmit={handleSubmit(this.submitAbc)}>
