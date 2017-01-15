@@ -54,9 +54,13 @@ interface Props2 extends FormProps<MainFormData, any, any>{
     dispatch: Redux.Dispatch<any>;
 };
 
+function submit(values) {
+console.log(values);
+}
+
 class MainFormComponent extends React.Component<Props2, {}> {
     render() {
-        const { handleSubmit } = this.props;
+        const { error, handleSubmit, pristine, reset, submitting } = this.props;
 
         const required = value => value ? undefined : 'Required'
         const maxLength = max => value =>
@@ -75,7 +79,7 @@ class MainFormComponent extends React.Component<Props2, {}> {
         )
 
         return (
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit(submit)}>
                 <div>
                     <label htmlFor="firstName">First Name</label>
                     <Field name="firstName" component={renderField} type="text" validate={[ required, maxLength15 ]}/>
@@ -118,6 +122,8 @@ class MainFormComponent extends React.Component<Props2, {}> {
                         <Field name="notes" component="textarea"/>
                     </div>
                 </div>
+                <button type="submit" disabled={submitting}>Log In</button>
+
                 <button onClick={this.aaa.bind(this)}></button>
             </form>
         );
