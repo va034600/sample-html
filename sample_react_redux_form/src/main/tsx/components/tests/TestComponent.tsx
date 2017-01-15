@@ -30,16 +30,6 @@ class TargetComponent extends React.Component<Props, {}> {
             </div>
         );
     }
-
-    // handleSubmit(values) {
-    //     // Do something with the form values
-    //     console.log(values);
-    // }
-
-    // handleSubmit = (values) => {
-    //     // Do something with the form values
-    //     console.log(values);
-    // }
 }
 
 interface MainFormData extends FormData{
@@ -53,10 +43,6 @@ interface Props2 extends FormProps<MainFormData, any, any>{
     value: TestGlobalState;
     dispatch: Redux.Dispatch<any>;
 };
-
-function submit(values) {
-console.log(values);
-}
 
 class MainFormComponent extends React.Component<Props2, {}> {
     render() {
@@ -79,10 +65,10 @@ class MainFormComponent extends React.Component<Props2, {}> {
         )
 
         return (
-            <form onSubmit={handleSubmit(submit)}>
+            <form onSubmit={handleSubmit(this.submitAbc)}>
                 <div>
                     <label htmlFor="firstName">First Name</label>
-                    <Field name="firstName" component={renderField} type="text" validate={[ required, maxLength15 ]}/>
+                    <Field name="firstName" component="input" type="text"/>
                 </div>
                 <div>
                     <label htmlFor="lastName">Last Name</label>
@@ -122,15 +108,20 @@ class MainFormComponent extends React.Component<Props2, {}> {
                         <Field name="notes" component="textarea"/>
                     </div>
                 </div>
-                <button type="submit" disabled={submitting}>Log In</button>
+                <button type="submit" disabled={pristine || submitting}>Log In</button>
+                <button type="button" disabled={pristine || submitting} onClick={reset}>Clear Values</button>
 
-                <button onClick={this.aaa.bind(this)}></button>
+                <button type="button" onClick={this.clickByTestButton.bind(this)}>test</button>
             </form>
         );
     }
 
-    aaa(){
+    clickByTestButton(){
         this.props.dispatch(fetchTest());
+    }
+
+    submitAbc(values) {
+        console.log(values);
     }
 }
 
