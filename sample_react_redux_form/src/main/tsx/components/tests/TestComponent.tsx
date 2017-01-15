@@ -16,17 +16,18 @@ class TargetComponent extends React.Component<Props, {}> {
     }
 
     render() {
-        const MainFormComponentConnect = connect(
-            mapStateToProps
-        )(MainFormComponent);
-
         const MainFormComponentRedux = reduxForm({
             form: 'mainForm' // a unique name for this form
-        })(MainFormComponentConnect);
+        })(MainFormComponent);
+
+        const MainFormComponentConnect = connect(
+            mapStateToProps
+        )(MainFormComponentRedux);
+
         return (
             <div>
                 <div>re</div>
-                <MainFormComponentRedux />
+                <MainFormComponentConnect />
             </div>
         );
     }
