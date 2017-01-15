@@ -3,8 +3,8 @@ import {TestGlobalState} from "../../states/tests/TestGlobalState";
 
 export interface TestAction {
     type: string;
-    // data:any;
-    firstName:string;
+    data:TestGlobalState;
+    // firstName:string;
     // lastName?:string;
     // email?:string;
 }
@@ -19,9 +19,7 @@ export function testReducer(state: TestGlobalState = initialState, action: TestA
     console.log(action.type);
     switch (action.type) {
         case 'redux-form-examples/account/LOAD':
-            return {
-                firstName:"ffffsss"
-            }
+            return action.data
         case "FETCH":
             return state;
         default:

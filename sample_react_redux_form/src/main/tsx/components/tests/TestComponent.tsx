@@ -5,7 +5,12 @@ import {Field, reduxForm, reducer as formReducer, FormProps, DataShape} from 're
 import {TestGlobalState} from "../../states/tests/TestGlobalState";
 import {fetchTest, loadEvent} from "../../actions/tests/TestActions";
 
-class TargetComponent extends React.Component<{}, {}> {
+interface Props {
+    value: TestGlobalState;
+    // dispatch: Redux.Dispatch<any>;
+};
+
+class TargetComponent extends React.Component<Props, {}> {
     constructor(props) {
         super(props);
     }
@@ -141,7 +146,14 @@ function mapStateToProps(state) {
     };
 }
 
+function mapStateToProps2(state) {
+    return {
+        value: state.testReducer
+    };
+}
+
 export function test6(){
     return connect(
+        mapStateToProps2
     )(TargetComponent);
 }
