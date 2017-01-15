@@ -32,15 +32,14 @@ class TargetComponent extends React.Component<Props, {}> {
     }
 }
 
-// interface MainDataShape extends DataShape{
-//     firstName?:string;
-//     lastName?:string;
-//     email?:string;
+interface MainDataShape{
+    // firstName?:string;
+    // lastName?:string;
+    // email?:string;
 //     favoriteColor?:string;
-// }
+}
 
-// interface Props2 extends FormProps<MainDataShape, any, any>{
-interface Props2{
+interface Props2 extends FormProps<MainDataShape, any, any>{
     value: TestGlobalState;
     dispatch: Redux.Dispatch<any>;
 };
