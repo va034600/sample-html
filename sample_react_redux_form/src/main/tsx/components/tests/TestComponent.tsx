@@ -136,10 +136,8 @@ class MainFormComponent extends React.Component<Props2, {}> {
 
 function mapStateToProps(state) {
     return {
-        // value: state.test6Reducer
-        initialValues: {
-            firstName:state.test6Reducer.firstName
-        }
+        // value: state.testReducer
+        initialValues: state.testReducer
     };
 }
 

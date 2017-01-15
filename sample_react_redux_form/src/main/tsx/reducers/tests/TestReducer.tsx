@@ -15,12 +15,12 @@ const initialState:TestGlobalState = {
     // email:null
 };
 
-export function test6Reducer(state: TestGlobalState = initialState, action: TestAction): TestGlobalState {
+export function testReducer(state: TestGlobalState = initialState, action: TestAction): TestGlobalState {
     console.log(action.type);
     switch (action.type) {
         case 'redux-form-examples/account/LOAD':
             return {
-                firstName:action.firstName
+                firstName:"ffffsss"
             }
         case "FETCH":
             return state;
