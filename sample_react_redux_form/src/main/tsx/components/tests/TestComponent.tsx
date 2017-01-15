@@ -3,7 +3,7 @@ import {connect} from "react-redux";
 import {Field, reduxForm, reducer as formReducer, FormProps, DataShape} from 'redux-form'
 
 import {TestGlobalState} from "../../states/tests/TestGlobalState";
-import {fetchTest} from "../../actions/tests/TestActions";
+import {fetchTest, loadEvent} from "../../actions/tests/TestActions";
 
 class TargetComponent extends React.Component<{}, {}> {
     constructor(props) {
@@ -112,12 +112,19 @@ class MainFormComponent extends React.Component<Props2, {}> {
                 <button type="button" disabled={pristine || submitting} onClick={reset}>Clear Values</button>
 
                 <button type="button" onClick={this.clickByTestButton.bind(this)}>test</button>
+                <button type="button" onClick={this.clickByLoadButton.bind(this)}>load</button>
             </form>
         );
     }
 
     clickByTestButton(){
         this.props.dispatch(fetchTest());
+    }
+
+    clickByLoadButton(){
+        this.props.dispatch(loadEvent({
+            firstName:"f1"
+        }));
     }
 
     submitAbc(values) {

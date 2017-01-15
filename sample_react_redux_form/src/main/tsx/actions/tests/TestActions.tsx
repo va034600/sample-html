@@ -11,3 +11,16 @@ export function fetchTest() {
         dispatch(fetchData());
     };
 }
+
+function load(data) {
+    return {
+        type: "redux-form-examples/account/LOAD",
+        data:data
+    };
+}
+
+export function loadEvent(data) {
+    return (dispatch, getState)  => {
+        dispatch(load(data));
+    };
+}
