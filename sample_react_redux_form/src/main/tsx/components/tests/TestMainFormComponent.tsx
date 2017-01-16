@@ -18,6 +18,12 @@ interface Props2 extends FormProps<MainDataShape, any, any>{
 };
 
 class MainFormComponent extends React.Component<Props2, {}> {
+    constructor(props) {
+        super(props);
+
+        this.submitByMainForm = this.submitByMainForm.bind(this);
+    }
+
     render() {
         const { error, handleSubmit, pristine, reset, submitting } = this.props;
 
@@ -28,7 +34,7 @@ class MainFormComponent extends React.Component<Props2, {}> {
         const number = value => value && isNaN(Number(value)) ? 'Must be a number' : undefined
 
         return (
-            <form onSubmit={handleSubmit(this.submitAbc)}>
+            <form onSubmit={handleSubmit(this.submitByMainForm)}>
                 <Field name="username" type="text"
                        component={renderField} label="Username"
                        validate={[ required, maxLength15 ]}
@@ -78,14 +84,9 @@ class MainFormComponent extends React.Component<Props2, {}> {
                 <button type="submit" disabled={pristine || submitting}>Log In</button>
                 <button type="button" disabled={pristine || submitting} onClick={reset}>Clear Values</button>
 
-                <button type="button" onClick={this.clickByTestButton.bind(this)}>test</button>
                 <button type="button" onClick={this.clickByLoadButton.bind(this)}>load</button>
             </form>
         );
-    }
-
-    clickByTestButton(){
-        this.props.dispatch(fetchTest());
     }
 
     clickByLoadButton(){
@@ -94,9 +95,9 @@ class MainFormComponent extends React.Component<Props2, {}> {
         }));
     }
 
-    submitAbc(values) {
+    submitByMainForm(values) {
         console.log(values);
-        alert("do submit");
+        this.props.dispatch(fetchTest());
     }
 }
 
