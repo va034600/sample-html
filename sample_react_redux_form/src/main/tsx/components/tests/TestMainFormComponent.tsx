@@ -2,6 +2,7 @@ import * as React from "react";
 import {connect} from "react-redux";
 import {Field, reduxForm, FormProps} from "redux-form";
 import {fetchTest, loadEvent} from "../../actions/tests/TestActions";
+import {renderField, SelectMessageComponent} from "./BaseField";
 
 interface MainDataShape{
     // firstName?:string;
@@ -15,16 +16,6 @@ interface Props2 extends FormProps<MainDataShape, any, any>{
     initialValues: any
     dispatch: Redux.Dispatch<any>;
 };
-
-const renderField = ({ input, label, type, meta: { touched, error, warning } }) => (
-    <div>
-        <label>{label}</label>
-        <div>
-            <input {...input} placeholder={label} type={type}/>
-            {touched && ((error && <span>{error}</span>) || (warning && <span>{warning}</span>))}
-        </div>
-    </div>
-)
 
 class MainFormComponent extends React.Component<Props2, {}> {
     render() {
@@ -64,7 +55,7 @@ class MainFormComponent extends React.Component<Props2, {}> {
                 <div>
                     <label>Favorite Color</label>
                     <div>
-                        <Field name="favoriteColor" component="select">
+                        <Field name="favoriteColor" component={ SelectMessageComponent } validate={[ required ]}>
                             <option></option>
                             <option value="ff0000">Red</option>
                             <option value="00ff00">Green</option>
