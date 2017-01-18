@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "devDependencies": {
+    "@types/react": "^15.0.0",
+    "@types/react-dom": "^0.14.20",
     "gulp": "^3.9.1",
     "gulp-if": "^2.0.1",
     "gulp-rename": "1.2.2",
