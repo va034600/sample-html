@@ -1,0 +1,10 @@
+{
+  "name": "sample-react",
+  "dependencies": {
+  },
+  "globalDependencies": {
+  },
+  "resolution": {
+    "main": "src/lib/tsd"
+  }
+}
