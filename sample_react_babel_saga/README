@@ -1,0 +1,11 @@
+$ brew install npm
+$ npm install
+$ npm install -g typescript
+$ npm install -g webpack
+$ npm install -g typings
+$ typings install
+
+$ gulp
+
+
+http://localhost:3000/webroot/
