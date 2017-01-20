@@ -2,11 +2,16 @@
 
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import 'babel-polyfill';
+import {Provider} from "react-redux";
 
-import TestComponent from "components/tests/TestComponent";
+import {test6} from "components/tests/Test6Component";
+import store from "MainStore";
+
+const TargetComponent = test6();
 
 ReactDOM.render(
-	React.createElement(TestComponent, {content: "test abc"}),
+	<Provider store={store}>
+		<TargetComponent />
+	</Provider>,
 	document.getElementById('content')
 );
