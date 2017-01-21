@@ -1,4 +1,4 @@
-export class Test6ActionTypes{
+export class TestActionTypes{
     static FETCH = 'FETCH';
     static RECEIVE = 'RECEIVE';
 }

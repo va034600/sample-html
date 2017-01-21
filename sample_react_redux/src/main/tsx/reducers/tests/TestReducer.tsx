@@ -1,23 +1,23 @@
-import {Test6ActionTypes} from "types/tests/Test6ActionTypes";
-import {Test6GlobalState, SampleRecord} from "states/tests/Test6GlobalState";
+import {TestActionTypes} from "../../types/tests/TestActionTypes";
+import {TestGlobalState, SampleRecord} from "../../states/tests/TestGlobalState";
 
 export interface Test6Action {
     type: string;
     sampleRecordList: SampleRecord[];
 }
 
-const initialState:Test6GlobalState = {
+const initialState:TestGlobalState = {
     apiUrl:'http://localhost:3000/webroot/test.json',
     isFetching:false,
     sampleRecordList:[]
 };
 
-export function test6Reducer(state: Test6GlobalState = initialState, action: Test6Action): Test6GlobalState {
+export function testReducer(state: TestGlobalState = initialState, action: Test6Action): TestGlobalState {
     //console.log(action.type); //check which action has occurred;
     switch (action.type) {
-        case Test6ActionTypes.FETCH:
+        case TestActionTypes.FETCH:
             return {apiUrl:state.apiUrl, isFetching:true, sampleRecordList: []};
-        case Test6ActionTypes.RECEIVE:
+        case TestActionTypes.RECEIVE:
             return {apiUrl:state.apiUrl, isFetching:false, sampleRecordList: action.sampleRecordList};
         default:
             return state

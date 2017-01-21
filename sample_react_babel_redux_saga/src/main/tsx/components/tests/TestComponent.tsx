@@ -49,7 +49,7 @@ class SearchResult extends React.Component<Props2, {}> {
 
 function mapStateToProps(state) {
     return {
-        value: state.test6Reducer
+        value: state.testReducer
     };
 }
 

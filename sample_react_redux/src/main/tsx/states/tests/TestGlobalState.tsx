@@ -1,4 +1,4 @@
-export interface Test6GlobalState {
+export interface TestGlobalState {
     apiUrl:string,
     isFetching:boolean,
     sampleRecordList:SampleRecord[]

@@ -12,7 +12,7 @@ const initialState:TestGlobalState = {
     sampleRecordList:[]
 };
 
-export function test6Reducer(state: TestGlobalState = initialState, action: Test6Action): TestGlobalState {
+export function testReducer(state: TestGlobalState = initialState, action: Test6Action): TestGlobalState {
     //console.log(action.type); //check which action has occurred;
     switch (action.type) {
         case TestActionTypes.USER_FETCH_REQUESTED:

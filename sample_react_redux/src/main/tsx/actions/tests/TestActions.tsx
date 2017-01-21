@@ -1,15 +1,15 @@
-import {Test6ActionTypes} from "types/tests/Test6ActionTypes";
+import {TestActionTypes} from "../../types/tests/TestActionTypes";
 import 'whatwg-fetch';
 
 function fetchData() {
     return {
-        type: Test6ActionTypes.FETCH
+        type: TestActionTypes.FETCH
     };
 }
 
 function receiveData(sampleRecordList) {
     return {
-        type: Test6ActionTypes.RECEIVE,
+        type: TestActionTypes.RECEIVE,
         sampleRecordList: sampleRecordList
     };
 }
@@ -18,7 +18,7 @@ export function fetchTest() {
     return (dispatch, getState)  => {
         dispatch(fetchData());
 
-        fetch(getState().test6Reducer.apiUrl).then(res => {
+        fetch(getState().testReducer.apiUrl).then(res => {
             res.json().then(json => {
                 dispatch(receiveData(json.records));
             });
