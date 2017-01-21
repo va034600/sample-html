@@ -6,10 +6,10 @@ import * as React from "react";
 import * as ReactDOM from "react-dom";
 import {Provider} from "react-redux";
 
-import {test6} from "components/tests/Test6Component";
+import {testComponent} from "components/tests/TestComponent";
 import store from "MainStore";
 
-const TargetComponent = test6();
+const TargetComponent = testComponent();
 
 ReactDOM.render(
 	<Provider store={store}>

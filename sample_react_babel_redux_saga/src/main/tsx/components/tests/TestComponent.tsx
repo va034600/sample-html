@@ -1,10 +1,10 @@
 import * as React from "react";
-import {Test6GlobalState, SampleRecord} from "states/tests/Test6GlobalState";
+import {TestGlobalState, SampleRecord} from "../../states/tests/TestGlobalState";
 import {connect} from "react-redux";
-import {fetchList} from "actions/tests/Test6Actions";
+import {fetchList} from "../../actions/tests/TestActions";
 
 interface Props {
-    value: Test6GlobalState;
+    value: TestGlobalState;
     dispatch: Redux.Dispatch<any>;
 }
 
@@ -53,7 +53,7 @@ function mapStateToProps(state) {
     };
 }
 
-export function test6(){
+export function testComponent(){
     return connect(
         mapStateToProps
     )(TargetComponent);

@@ -1,6 +1,6 @@
 import { call, put} from 'redux-saga/effects'
 import {takeEvery, takeLatest} from "redux-saga";
-import {Test6ActionTypes} from "../../types/tests/Test6ActionTypes";
+import {TestActionTypes} from "../../types/tests/TestActionTypes";
 
 class Api{
     static fetchUser(){
@@ -16,7 +16,7 @@ class Api{
     }
 }
 
-const helloWorld = (payload): Promise<void> => {
+const helloWorld = (payload:number): Promise<void> => {
     return new Promise<void>(resolve => {
         setTimeout(() => {
             resolve([
@@ -39,9 +39,9 @@ function* fetchUser(action) {
 
         // const user = yield call(fetch, '/webroot/test.json', { method: 'GET' })
 
-        yield put({type: Test6ActionTypes.USER_FETCH_SUCCEEDED, sampleRecordList: sampleRecordList});
+        yield put({type: TestActionTypes.USER_FETCH_SUCCEEDED, sampleRecordList: sampleRecordList});
     } catch (e) {
-        yield put({type: Test6ActionTypes.USER_FETCH_FAILED, message: e.message});
+        yield put({type: TestActionTypes.USER_FETCH_FAILED, message: e.message});
     }
 }
 
