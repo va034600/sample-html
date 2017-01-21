@@ -2,17 +2,25 @@ import {call, put} from "redux-saga/effects";
 import {takeEvery} from "redux-saga";
 import {TestActionTypes} from "../../types/tests/TestActionTypes";
 
+//
+// const fetchUser2 = (payload:number): Promise<Response> => {
+//     return fetch("http://localhost:3000/webroot/test.json", {method: 'GET'});
+// }
+
 class Api{
     static fetchUser(){
-        return fetch("http://localhost:3000/webroot/test.json", {method: 'GET'}
-            )
+        return fetch("http://localhost:3000/webroot/test.json", {method: 'GET'})
     }
 
-    static searchByLocation() {
-        return fetch(`http://localhost:3000/webroot/test.json`)
-            .then(res => res.json())
-            .then(payload => { payload })
-            .catch(error => { error });
+    static searchByLocation(): Promise<void> {
+        return new Promise<void>(resolve => {
+            fetch("http://localhost:3000/webroot/test.json").then(res => {
+                res.json().then(json => {
+                    resolve(json);
+                });
+            })
+            ;
+        });
     }
 }
 
@@ -30,12 +38,11 @@ const helloWorld = (payload:number): Promise<void> => {
 // worker Saga: will be fired on USER_FETCH_REQUESTED actions
 function* fetchUser(action) {
     try {
-        // const records = yield call(Api.fetchUser, action.payload);
-        // var user = records;
-        // const user = yield call(Api.fetchUser, action.payload);
-        // const user = yield call(Api.searchByLocation);
-        // const { payload, error } = yield call(Api.fetchUser, action.payload);
-        const sampleRecordList = yield call(helloWorld, action.payload);
+        // const sampleRecordList = yield call(Api.fetchUser, action.payload);
+        // const sampleRecordList = yield call(fetchUser2, action.payload);
+        var sampleRecordList = yield call(Api.searchByLocation);
+        sampleRecordList = sampleRecordList.records;
+        // const sampleRecordList = yield call(helloWorld, action.payload);
 
         // const user = yield call(fetch, '/webroot/test.json', { method: 'GET' })
 
