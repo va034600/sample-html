@@ -1,7 +1,7 @@
 import * as React from "react";
 import {Test6GlobalState, SampleRecord} from "states/tests/Test6GlobalState";
 import {connect} from "react-redux";
-import {receiveData} from "actions/tests/Test6Actions";
+import {fetchList} from "actions/tests/Test6Actions";
 
 interface Props {
     value: Test6GlobalState;
@@ -14,7 +14,7 @@ class TargetComponent extends React.Component<Props, {}> {
     }
 
     componentDidMount() {
-        this.props.dispatch({type: 'USER_FETCH_REQUESTED', payload: 1});
+        this.props.dispatch(fetchList(3));
     }
 
     render() {

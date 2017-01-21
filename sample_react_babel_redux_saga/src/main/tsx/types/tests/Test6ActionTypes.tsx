@@ -1,4 +1,5 @@
 export class Test6ActionTypes{
-    static FETCH = 'FETCH';
-    static RECEIVE = 'RECEIVE';
+    static USER_FETCH_REQUESTED = 'USER_FETCH_REQUESTED';
+    static USER_FETCH_SUCCEEDED = 'USER_FETCH_SUCCEEDED';
+    static USER_FETCH_FAILED = 'USER_FETCH_FAILED';
 }

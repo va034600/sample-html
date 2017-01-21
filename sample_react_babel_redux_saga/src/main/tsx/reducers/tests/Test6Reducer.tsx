@@ -15,14 +15,10 @@ const initialState:Test6GlobalState = {
 export function test6Reducer(state: Test6GlobalState = initialState, action: Test6Action): Test6GlobalState {
     //console.log(action.type); //check which action has occurred;
     switch (action.type) {
-        case Test6ActionTypes.FETCH:
-            return {apiUrl:state.apiUrl, isFetching:true, sampleRecordList: []};
-        case Test6ActionTypes.RECEIVE:
-            return {apiUrl:state.apiUrl, isFetching:false, sampleRecordList: action.sampleRecordList};
         case "USER_FETCH_REQUESTED":
-            return {apiUrl:state.apiUrl, isFetching:state.isFetching, sampleRecordList: state.sampleRecordList};
+            return {apiUrl:state.apiUrl, isFetching:true, sampleRecordList: state.sampleRecordList};
         case "USER_FETCH_SUCCEEDED":
-            return {apiUrl:state.apiUrl, isFetching:state.isFetching, sampleRecordList: action.sampleRecordList};
+            return {apiUrl:state.apiUrl, isFetching:false, sampleRecordList: action.sampleRecordList};
         default:
             return state
     }
