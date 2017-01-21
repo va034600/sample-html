@@ -7,8 +7,9 @@ import * as ReactDOM from "react-dom";
 import {Provider} from "react-redux";
 
 import {testComponent} from "components/tests/TestComponent";
-import store from "MainStore";
+import {createMainStore} from "MainStore";
 
+const store = createMainStore();
 const TargetComponent = testComponent();
 
 ReactDOM.render(
