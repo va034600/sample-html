@@ -1,5 +1,5 @@
-import { call, put} from 'redux-saga/effects'
-import {takeEvery, takeLatest} from "redux-saga";
+import {call, put} from "redux-saga/effects";
+import {takeEvery} from "redux-saga";
 import {TestActionTypes} from "../../types/tests/TestActionTypes";
 
 class Api{
@@ -23,7 +23,7 @@ const helloWorld = (payload:number): Promise<void> => {
                 {id:1,name:"test1"},
                 {id:2,name:"test2"},
                 {id:payload,name:"test" + payload}
-            ]);
+            ] as any);
         }, 1000);
     });
 }
