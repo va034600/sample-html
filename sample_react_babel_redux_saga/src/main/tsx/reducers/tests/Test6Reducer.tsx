@@ -19,6 +19,10 @@ export function test6Reducer(state: Test6GlobalState = initialState, action: Tes
             return {apiUrl:state.apiUrl, isFetching:true, sampleRecordList: []};
         case Test6ActionTypes.RECEIVE:
             return {apiUrl:state.apiUrl, isFetching:false, sampleRecordList: action.sampleRecordList};
+        case "USER_FETCH_REQUESTED":
+            return {apiUrl:state.apiUrl, isFetching:state.isFetching, sampleRecordList: state.sampleRecordList};
+        case "USER_FETCH_SUCCEEDED":
+            return {apiUrl:state.apiUrl, isFetching:state.isFetching, sampleRecordList: action.sampleRecordList};
         default:
             return state
     }

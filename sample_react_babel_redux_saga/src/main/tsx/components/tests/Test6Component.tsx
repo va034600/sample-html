@@ -14,10 +14,7 @@ class TargetComponent extends React.Component<Props, {}> {
     }
 
     componentDidMount() {
-        this.props.dispatch(receiveData([
-            {id:1,name:"test1"},
-            {id:2,name:"test2"}
-        ]));
+        this.props.dispatch({type: 'USER_FETCH_REQUESTED', payload: 1});
     }
 
     render() {
