@@ -2,17 +2,12 @@ import {call, put} from "redux-saga/effects";
 import {takeEvery} from "redux-saga";
 import {TestActionTypes} from "../../types/tests/TestActionTypes";
 
-//
-// const fetchUser2 = (payload:number): Promise<Response> => {
-//     return fetch("http://localhost:3000/webroot/test.json", {method: 'GET'});
-// }
-
 class Api{
     static fetchUser(){
         return fetch("http://localhost:3000/webroot/test.json", {method: 'GET'})
     }
 
-    static searchByLocation(): Promise<void> {
+    static fetchUser2(): Promise<void> {
         return new Promise<void>(resolve => {
             fetch("http://localhost:3000/webroot/test.json").then(res => {
                 res.json().then(json => {
@@ -24,27 +19,12 @@ class Api{
     }
 }
 
-const helloWorld = (payload:number): Promise<void> => {
-    return new Promise<void>(resolve => {
-        setTimeout(() => {
-            resolve([
-                {id:1,name:"test1"},
-                {id:2,name:"test2"},
-                {id:payload,name:"test" + payload}
-            ] as any);
-        }, 1000);
-    });
-}
 // worker Saga: will be fired on USER_FETCH_REQUESTED actions
 function* fetchUser(action) {
     try {
         // const sampleRecordList = yield call(Api.fetchUser, action.payload);
-        // const sampleRecordList = yield call(fetchUser2, action.payload);
-        var sampleRecordList = yield call(Api.searchByLocation);
+        var sampleRecordList = yield call(Api.fetchUser2);
         sampleRecordList = sampleRecordList.records;
-        // const sampleRecordList = yield call(helloWorld, action.payload);
-
-        // const user = yield call(fetch, '/webroot/test.json', { method: 'GET' })
 
         yield put({type: TestActionTypes.USER_FETCH_SUCCEEDED, sampleRecordList: sampleRecordList});
     } catch (e) {
