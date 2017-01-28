@@ -14,7 +14,7 @@ render((
 			<IndexRoute component={IndexComponent} />
 			<Route path="about" component={AboutComponent}/>
 			<Route path="users" component={UsersComponent}>
-				<Route path="/user/:userId" component={UserComponent}/>
+				<Route path=":userId" component={UserComponent}/>
 			</Route>
 			<Route path="*" component={NoMatchComponent}/>
 		</Route>
