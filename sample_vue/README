@@ -1,0 +1,5 @@
+$ brew install node
+$ npm install -g gulp
+
+$ npm install
+$ gulp
