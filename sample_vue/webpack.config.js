@@ -6,7 +6,7 @@ var config = {
 
   output: {
     path: path.join(__dirname, 'dist'),
-    filename: '[name]2.js',
+    filename: '[name].min.js',
     publicPath: "/public/"
   },
   resolve: {
@@ -18,12 +18,23 @@ var config = {
   },
   module: {
       rules: [
-        { 
-          test: /\.ts$/, 
+          {
+              test: /\.vue$/,
+              use: [
+                  {
+                      loader: 'babel-loader',
+                  },
+                  {
+                      loader: 'vue-loader'
+                  }
+              ]
+          },
+          {
+          test: /\.ts$/,
           use: [
             {
               loader: 'babel-loader',
-            }, 
+            },
             {
               loader: 'ts-loader',
               options: {
@@ -42,9 +53,14 @@ var config = {
 
 config.entry = {
     main_js: [
-      "webpack-dev-server/client?http://localhost:3000",
-      "webpack/hot/dev-server",
-      "./src/main/js/main_js.js"
+        "webpack-dev-server/client?http://localhost:3000",
+        "webpack/hot/dev-server",
+        "./src/main/js/main_js.js"
+    ],
+    main_js2: [
+        "webpack-dev-server/client?http://localhost:3000",
+        "webpack/hot/dev-server",
+        "./src/main/js/main_js2.js"
     ],
     main_ts: [
       "webpack-dev-server/client?http://localhost:3000",
