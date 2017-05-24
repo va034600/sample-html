@@ -1,17 +1,22 @@
 <template>
-  <div id="app2">
+  <div>
     <h1>{{ msg }}</h1>
-    aaaaaaa
+    sample1
+    <sample2></sample2>
   </div>
 </template>
 
 <script>
-export default {
-  name: 'app2',
-  data () {
-    return {
-      msg: 'ok App'
-    }
-  }
+    import Sample2 from './sample2.vue'
+
+    export default {
+        data () {
+            return {
+                msg: 'ok App'
+            }
+        },
+        components:{
+            sample2:Sample2
+        }
 }
 </script>
