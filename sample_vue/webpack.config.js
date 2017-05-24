@@ -63,9 +63,14 @@ config.entry = {
         "./src/main/js/main_js2.js"
     ],
     main_ts: [
-      "webpack-dev-server/client?http://localhost:3000",
-      "webpack/hot/dev-server",
-      "./src/main/ts/main_ts.ts"
+        "webpack-dev-server/client?http://localhost:3000",
+        "webpack/hot/dev-server",
+        "./src/main/ts/main_ts.ts"
+    ],
+    main_router: [
+        "webpack-dev-server/client?http://localhost:3000",
+        "webpack/hot/dev-server",
+        "./src/main/ts/main_router.ts"
     ]
   };
 
