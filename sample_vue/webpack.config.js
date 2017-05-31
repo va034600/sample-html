@@ -30,6 +30,10 @@ var config = {
               ]
           },
           {
+              test: /\.vhtml$/,
+              loader: 'vue-template-loader'
+          },
+          {
           test: /\.ts$/,
           use: [
             {
@@ -66,6 +70,11 @@ config.entry = {
         "webpack-dev-server/client?http://localhost:3000",
         "webpack/hot/dev-server",
         "./src/main/ts/main_ts.ts"
+    ],
+    main_ts2: [
+        "webpack-dev-server/client?http://localhost:3000",
+        "webpack/hot/dev-server",
+        "./src/main/ts/main_ts2.ts"
     ],
     main_router: [
         "webpack-dev-server/client?http://localhost:3000",
