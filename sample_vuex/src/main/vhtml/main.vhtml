@@ -1,0 +1,6 @@
+<section>
+    <p><input v-model="message"></p>
+    <p>{{message}}</p>
+    <a class="button is-light" @click="clickByAlertButton">test</a>
+    <sample />
+</section>
