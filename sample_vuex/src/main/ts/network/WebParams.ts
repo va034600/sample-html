@@ -14,7 +14,7 @@ export class WebParams{
     }
 
     append(name: string, value: string): void{
-        if(value === null){
+        if(value === null || value === "" || value === undefined){
             return;
         }
 
