@@ -1,4 +1,5 @@
 import {WebParams} from "../WebParams";
+import {WebUrlParams} from "../WebUrlParams";
 
 export default class BaseAPI {
     static post<T>(apiUrl:string, params:WebParams = null){
@@ -10,7 +11,7 @@ export default class BaseAPI {
         })
     }
 
-    static get<T>(apiUrl:string, params:WebParams = null){
+    static get<T>(apiUrl:string, params:WebUrlParams = null){
         var url = apiUrl;
         if(params){
             url += "?" + params.data;
