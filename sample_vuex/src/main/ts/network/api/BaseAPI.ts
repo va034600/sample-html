@@ -11,10 +11,12 @@ export default class BaseAPI {
     }
 
     static get<T>(apiUrl:string, params:WebParams = null){
-        let body = params ? params.data : null;
-        return this.send<T>(apiUrl, {
-            credentials: 'include',
-            body: body
+        var url = apiUrl;
+        if(params){
+            url += "?" + params.data;
+        }
+        return this.send<T>(url, {
+            credentials: 'include'
         })
     }
 

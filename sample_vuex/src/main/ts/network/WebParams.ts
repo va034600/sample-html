@@ -1,8 +1,16 @@
 export class WebParams{
     formData = new FormData();
+    params = new URLSearchParams();
+
+    constructor(private type:string = "get"){
+    }
 
     get data(){
-        return this.formData;
+        if(this.type === "get"){
+            return this.params.toString();
+        }else{
+            return this.formData;
+        }
     }
 
     append(name: string, value: string): void{
@@ -10,7 +18,11 @@ export class WebParams{
             return;
         }
 
-        this.formData.append(name, value);
+        if(this.type === "get") {
+            this.params.append(name, value);
+        }else{
+            this.formData.append(name, value);
+        }
     }
 
     appendFile(name: string, value: Blob, fileName: string): void{
