@@ -4,8 +4,8 @@ import * as React from "react";
 import * as ReactDOM from "react-dom";
 import {Provider} from "react-redux";
 
-import {testComponent} from "components/tests/TestComponent";
-import store from "MainStore";
+import store from "./MainStore";
+import {testComponent} from "./components/tests/TestComponent";
 
 const TargetComponent = testComponent();
 

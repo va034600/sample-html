@@ -2,7 +2,6 @@ const webpack = require('webpack');
 var path = require('path');
 
 var config = {
-  debug: true,
   devtool: "source-map",
 
   output: {
@@ -11,10 +10,8 @@ var config = {
     publicPath: "/public/"
   },
   resolve: {
-    extensions: ["", ".ts", ".tsx", ".js"],
-    modulesDirectories: ['node_modules', 'src/lib/manual', 'src/main/tsx'],
-    alias: {
-    }
+    extensions: [".ts", ".tsx", ".js"],
+    modules: ['node_modules', 'src/main/html', 'src/main/js', 'src/lib/js', 'src/main/ts', 'src/lib/ts', 'src/main/tsx', 'src/lib/manual'],
   },
   module: {
     loaders: [
