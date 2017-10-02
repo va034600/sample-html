@@ -1,0 +1,12 @@
+{
+  "name": "sample-react",
+  "dependencies": {
+  },
+  "globalDependencies": {
+    "core-js": "registry:dt/core-js#0.9.7+20161130133742",
+    "redux-thunk": "registry:dt/redux-thunk#2.1.0+20160703120921"
+  },
+  "resolution": {
+    "main": "src/lib/tsd"
+  }
+}
