@@ -1,7 +1,7 @@
 import * as React from "react";
 import {connect} from "react-redux";
-// import {Autosuggest, AutosuggestProps, InputProps} from 'react-autosuggest';
 
+// import {Autosuggest, AutosuggestProps, InputProps} from 'react-autosuggest';
 import {AutosuggestProps, InputProps} from 'react-autosuggest'
 const Autosuggest = require('react-autosuggest') as
     new() => React.Component<AutosuggestProps, any>
@@ -65,19 +65,6 @@ const languages = [
     }
 ];
 
-// Teach Autosuggest how to calculate suggestions for any given input value.
-// const getSuggestions = value => {
-//     const inputValue = value.trim().toLowerCase();
-//     const inputLength = inputValue.length;
-//
-//     return inputLength === 0 ? [] : languages.filter(lang =>{
-//             // console.log("value:" + value + " inputValue:" + inputValue + " flag:" + (lang.name.toLowerCase().slice(0, inputLength) === inputValue))
-//             return lang.name.toLowerCase().slice(0, inputLength) === inputValue
-//         }
-//     );
-// };
-
-
 function escapeRegexCharacters(str) {
     return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 }
@@ -94,14 +81,8 @@ function getSuggestions(value) {
     return languages.filter(language => regex.test(language.name));
 }
 
-
-
-// When suggestion is clicked, Autosuggest needs to populate the input
-// based on the clicked suggestion. Teach Autosuggest how to calculate the
-// input value for every given suggestion.
 const getSuggestionValue = suggestion => suggestion.name;
 
-// Use your imagination to render suggestions.
 const renderSuggestion = suggestion => (
     <div>
         {suggestion.name}
@@ -109,10 +90,6 @@ const renderSuggestion = suggestion => (
 );
 
 interface Props extends AutosuggestProps {
-    // type: string;
-    // value: string;
-    // value: TestGlobalState;
-    dispatch: Redux.Dispatch<any>;
 }
 
 interface State {
@@ -134,26 +111,19 @@ class TargetComponent extends React.Component<Props, State> {
         console.log("onchange value:" + newValue);
         this.setState({
             value: newValue,
-//            suggestions: this.state.suggestions
         });
     };
 
-    // Autosuggest will call this function every time you need to update suggestions.
-    // You already implemented this logic above, so just use it.
     onSuggestionsFetchRequested = ({ value }) => {
         console.log("onSuggestionsFetchRequested value:" + value);
         this.setState({
-            //value: value,
             suggestions: getSuggestions(value)
         });
     };
 
-    // Autosuggest will call this function every time you need to clear suggestions.
     onSuggestionsClearRequested = () => {
         console.log("onSuggestionsClearRequested value:" + this.state.value);
         this.setState({
-            // value: this.state.value,
-            // value: "",
             suggestions: []
         });
     };
@@ -161,14 +131,12 @@ class TargetComponent extends React.Component<Props, State> {
     render() {
         const { value, suggestions } = this.state;
 
-        // Autosuggest will pass through all these props to the input.
         const inputProps:InputProps = {
             placeholder: 'Type a programming language',
             value: value,
             onChange: this.onChange.bind(this)
         };
 
-        // Finally, render it!
         return (
             <Autosuggest
                 suggestions={suggestions}
@@ -184,7 +152,6 @@ class TargetComponent extends React.Component<Props, State> {
 
 function mapStateToProps(state) {
     return {
-        // value: state.testReducer
     };
 }
 
