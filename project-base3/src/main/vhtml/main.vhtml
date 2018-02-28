@@ -1,0 +1,14 @@
+<section class="section">
+    <div class="container">
+        <h1 class="title">
+            {{message}}
+        </h1>
+
+        <div><router-link to="/">トップページ</router-link></div>
+        <div><router-link to="/sample">sample</router-link></div>
+        <div><router-link to="/sample2/123">sample2</router-link></div>
+        <div><router-link to="/aaaaaa">page not found</router-link></div>
+
+        <router-view></router-view>
+    </div>
+</section>
