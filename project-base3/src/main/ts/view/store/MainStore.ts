@@ -5,6 +5,7 @@ import Vuex, {MutationTree} from 'vuex'
 Vue.use(Vuex)
 import EnvironmentUtility from "../../utility/EnvironmentUtility";
 import sampleModule from '../module/SampleModule'
+import sampleBindModule from '../module/SampleBindModule'
 
 const NAMESPACE = 'main';
 const NAMESPACE_ACTION = `${NAMESPACE}/a/`
@@ -23,6 +24,7 @@ export const MutationKey = {
 export class RootState {
     constructor(
         public sample,
+        public sampleBind,
     ) { }
 }
 
@@ -41,6 +43,7 @@ function createStore():any{
         strict: EnvironmentUtility.isDevelopment(),
         modules:{
             sample:sampleModule,
+            sampleBind:sampleBindModule,
         }
     })
 }

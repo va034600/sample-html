@@ -21,8 +21,8 @@ export const GetterKey = {
 }
 
 export const MutationKey = {
-    SET_MESSAGE: `${NAMESPACE_MUTATION}SET_MESSAGE`,
-    SET_TITLE: `${NAMESPACE_MUTATION}SET_TITLE`,
+    SET_LOAD_MESSAGE: `${NAMESPACE_MUTATION}SET_LOAD_MESSAGE`,
+    SET_LOAD_TITLE: `${NAMESPACE_MUTATION}SET_LOAD_TITLE`,
 }
 
 function createStore(){
@@ -40,7 +40,7 @@ function createStore(){
         [ActionKey.LOAD_MESSAGE]: ({ commit }) => {
             return SampleAPI.getSample()
                 .then((res) =>{
-                    commit(MutationKey.SET_MESSAGE, res)
+                    commit(MutationKey.SET_LOAD_MESSAGE, res)
                 })
                 .catch(function(error) {
                     alert(error);
@@ -52,7 +52,7 @@ function createStore(){
             };
             return SampleAPI.getSample2(parameter)
                 .then((res) =>{
-                    commit(MutationKey.SET_TITLE, res)
+                    commit(MutationKey.SET_LOAD_TITLE, res)
                 })
                 .catch(function(error) {
                     alert(error);
@@ -61,10 +61,10 @@ function createStore(){
     } as ActionTree<State, never>
 
     const mutations = {
-        [MutationKey.SET_MESSAGE] (state, payload:SampleEntity) {
+        [MutationKey.SET_LOAD_MESSAGE] (state, payload:SampleEntity) {
             state.message = payload.message;
         },
-        [MutationKey.SET_TITLE] (state, payload:Sample2Entity) {
+        [MutationKey.SET_LOAD_TITLE] (state, payload:Sample2Entity) {
             state.title = payload.title;
         },
     } as MutationTree<State>
