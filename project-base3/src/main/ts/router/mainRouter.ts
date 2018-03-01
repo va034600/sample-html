@@ -1,8 +1,11 @@
 import VueRouter from 'vue-router'
 
 import {SampleComponent} from "../component/SampleComponent";
-import {Sample2Component} from "../component/Sample2Component";
 import {PageNotFoundComponent} from "../component/PageNotFoundComponent";
+import {SampleButtonComponent} from "../component/SampleButtonComponent";
+import {SampleParameterComponent} from "../component/SampleParameterComponent";
+import {SampleBindComponent} from "../component/SampleBindComponent";
+import {SampleLoadComponent} from "../component/SampleLoadComponent";
 
 const rootPath = `/`;
 
@@ -11,7 +14,10 @@ export default new VueRouter({
     routes:[
         { path: rootPath, component:  SampleComponent},
         { name: 'sample', path: rootPath + 'sample', component: SampleComponent},
-        { name: 'sample2', path: rootPath + 'sample2/:id', component: Sample2Component},
+        { name: 'sample-button', path: rootPath + 'sample-button', component: SampleButtonComponent},
+        { name: 'sample-parameter', path: rootPath + 'sample-parameter/:id', component: SampleParameterComponent},
+        { name: 'sample-bind', path: rootPath + 'sample-bind', component: SampleBindComponent},
+        { name: 'sample-load', path: rootPath + 'sample-load', component: SampleLoadComponent},
         { path: '*', component: PageNotFoundComponent},
     ]
 })

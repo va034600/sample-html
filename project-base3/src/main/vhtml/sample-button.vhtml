@@ -1,4 +1,4 @@
 <div class="sample2-content">
-    <h1>sample2</h1>
+    <h1>sample-click</h1>
     <a class="button is-light" @click="clickByAlertButton">test</a>
 </div>
