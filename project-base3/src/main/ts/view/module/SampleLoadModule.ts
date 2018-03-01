@@ -7,7 +7,7 @@ import {RootState} from "../store/MainStore";
 import {Sample2Parameter} from "../../network/parameter/Sample2Parameter";
 import {Sample2Entity} from "../../network/entity/Sample2Entity";
 
-const NAMESPACE = 'sample';
+const NAMESPACE = 'sample-load';
 const NAMESPACE_ACTION = `${NAMESPACE}/a/`
 const NAMESPACE_GETTER = `${NAMESPACE}/g/`
 const NAMESPACE_MUTATION = `${NAMESPACE}/m/`

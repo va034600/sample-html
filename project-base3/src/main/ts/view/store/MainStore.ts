@@ -4,7 +4,7 @@ import Vue from 'vue'
 import Vuex, {MutationTree} from 'vuex'
 Vue.use(Vuex)
 import EnvironmentUtility from "../../utility/EnvironmentUtility";
-import sampleModule from '../module/SampleModule'
+import sampleLoadModule from '../module/SampleLoadModule'
 import sampleBindModule from '../module/SampleBindModule'
 
 const NAMESPACE = 'main';
@@ -23,7 +23,7 @@ export const MutationKey = {
 
 export class RootState {
     constructor(
-        public sample,
+        public sampleLoad,
         public sampleBind,
     ) { }
 }
@@ -42,7 +42,7 @@ function createStore():any{
         mutations,
         strict: EnvironmentUtility.isDevelopment(),
         modules:{
-            sample:sampleModule,
+            sampleLoad:sampleLoadModule,
             sampleBind:sampleBindModule,
         }
     })
