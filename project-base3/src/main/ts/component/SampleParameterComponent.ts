@@ -7,7 +7,11 @@ import HtmlTemplate from '../../vhtml/sample-parameter.vhtml'
 @Component({
 })
 export class SampleParameterComponent extends Vue {
-    get message() {
+    get pathVariable() {
         return this.$route.params.id;
+    }
+
+    get getVariable() {
+        return this.$route.query.test;
     }
 }

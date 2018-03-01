@@ -1,4 +1,5 @@
 <div>
     <h1>sample-load</h1>
-    data: {{message}}<br>
+    message: {{message}}<br>
+    title: {{title}}<br>
 </div>

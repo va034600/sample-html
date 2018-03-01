@@ -1,7 +1,7 @@
-<nav class="navbar is-transparent">
+<nav class="navbar is-transparent is-black">
     <div class="navbar-brand">
         <router-link to="/" class="navbar-item">
-            <img src="https://bulma.io/images/bulma-logo.png" alt="Bulma: a modern CSS framework based on Flexbox" width="112" height="28">
+            <img src="https://bulma.io/images/bulma-logo-white.png" alt="Bulma: a modern CSS framework based on Flexbox" width="112" height="28">
         </router-link>
         <div class="navbar-burger burger" v-bind:class='{"is-active":opendMenu}' data-target="navbarExampleTransparentExample" @click="clickByToggleMenuButton">
             <span></span>
@@ -13,14 +13,14 @@
     <div id="navbarExampleTransparentExample" class="navbar-menu" v-bind:class='{"is-active":opendMenu}'>
         <div class="navbar-start">
             <router-link to="/sample" class="navbar-item">sample</router-link>
-            <router-link to="/sample-button" class="navbar-item">sample-button</router-link>
-            <router-link to="/sample-bind" class="navbar-item">sample-bind</router-link>
-            <router-link to="/sample-load" class="navbar-item">sample-load</router-link>
+            <router-link to="/sample-button" class="navbar-item">button</router-link>
+            <router-link to="/sample-bind" class="navbar-item">bind</router-link>
+            <router-link to="/sample-load" class="navbar-item">load</router-link>
             <div class="navbar-item has-dropdown is-hoverable">
                 <router-link to="/sample-parameter" class="navbar-link">parameter</router-link>
                 <div class="navbar-dropdown is-boxed">
-                    <router-link to="/sample-parameter/123" class="navbar-item">123</router-link>
-                    <router-link to="/sample-parameter/aaa" class="navbar-item">aaaa</router-link>
+                    <router-link to="/sample-parameter/123" class="navbar-item">/123</router-link>
+                    <router-link to="/sample-parameter/aaa?test=bbb" class="navbar-item">/aaa?test=bbb</router-link>
                 </div>
             </div>
             <router-link to="/aaaaaaa" class="navbar-item">page not found</router-link>

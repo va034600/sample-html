@@ -4,6 +4,8 @@ import {ActionTree, GetterTree, ModuleTree, MutationTree} from "vuex";
 import SampleAPI from "../network/api/SampleAPI";
 import {SampleEntity} from "../network/entity/SampleEntity";
 import {RootState} from "../store/MainStore";
+import {Sample2Parameter} from "../network/parameter/Sample2Parameter";
+import {Sample2Entity} from "../network/entity/Sample2Entity";
 
 const NAMESPACE = 'sample';
 const NAMESPACE_ACTION = `${NAMESPACE}/a/`
@@ -11,14 +13,15 @@ const NAMESPACE_GETTER = `${NAMESPACE}/g/`
 const NAMESPACE_MUTATION = `${NAMESPACE}/m/`
 
 export const ActionKey = {
-    LOAD: `${NAMESPACE_ACTION}LOAD`,
+    LOAD_MESSAGE: `${NAMESPACE_ACTION}LOAD_MESSAGE`,
+    LOAD_TITLE: `${NAMESPACE_ACTION}LOAD_TITLE`,
 }
 
 export const GetterKey = {
 }
 
 export const MutationKey = {
-    SET_DATA: `${NAMESPACE_MUTATION}SET_DATA`,
+    SET_MESSAGE: `${NAMESPACE_MUTATION}SET_MESSAGE`,
     SET_TITLE: `${NAMESPACE_MUTATION}SET_TITLE`,
 }
 
@@ -34,10 +37,22 @@ function createStore(){
     } as GetterTree<State, RootState>
 
     const actions = {
-        [ActionKey.LOAD]: ({ commit }) => {
+        [ActionKey.LOAD_MESSAGE]: ({ commit }) => {
             return SampleAPI.getSample()
                 .then((res) =>{
-                    commit(MutationKey.SET_DATA, res)
+                    commit(MutationKey.SET_MESSAGE, res)
+                })
+                .catch(function(error) {
+                    alert(error);
+                })
+        },
+        [ActionKey.LOAD_TITLE]: ({ commit }, p1) => {
+            const parameter:Sample2Parameter = {
+                abc:p1
+            };
+            return SampleAPI.getSample2(parameter)
+                .then((res) =>{
+                    commit(MutationKey.SET_TITLE, res)
                 })
                 .catch(function(error) {
                     alert(error);
@@ -46,11 +61,11 @@ function createStore(){
     } as ActionTree<State, never>
 
     const mutations = {
-        [MutationKey.SET_DATA] (state, payload:SampleEntity) {
+        [MutationKey.SET_MESSAGE] (state, payload:SampleEntity) {
             state.message = payload.message;
         },
-        [MutationKey.SET_TITLE](state, value){
-            state.title = value;
+        [MutationKey.SET_TITLE] (state, payload:Sample2Entity) {
+            state.title = payload.title;
         },
     } as MutationTree<State>
 
