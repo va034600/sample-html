@@ -3,9 +3,9 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import VueRouter from 'vue-router'
 
-import {MainComponent} from "./component/MainComponent";
-import {FooterComponent} from "./component/FooterComponent";
-import {NavigationComponent} from "./component/NavigationComponent";
+import {MainComponent} from "./view/component/MainComponent";
+import {FooterComponent} from "./view/component/FooterComponent";
+import {NavigationComponent} from "./view/component/NavigationComponent";
 
 Vue.use(Vuex)
 Vue.use(VueRouter)

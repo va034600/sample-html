@@ -1,9 +1,9 @@
-/// <reference path="../index.d.ts"/>
+/// <reference path="../../index.d.ts"/>
 
 import Vue from 'vue'
 import Vuex, {MutationTree} from 'vuex'
 Vue.use(Vuex)
-import EnvironmentUtility from "../utility/EnvironmentUtility";
+import EnvironmentUtility from "../../utility/EnvironmentUtility";
 import sampleModule from '../module/SampleModule'
 
 const NAMESPACE = 'main';

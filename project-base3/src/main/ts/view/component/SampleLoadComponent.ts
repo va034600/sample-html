@@ -1,7 +1,7 @@
-/// <reference path="../index.d.ts"/>
+/// <reference path="../../index.d.ts"/>
 import Vue from 'vue'
 import Component from 'vue-class-component'
-import HtmlTemplate from '../../vhtml/sample-load.vhtml'
+import HtmlTemplate from '../../../vhtml/sample-load.vhtml'
 import {ActionKey} from "../module/SampleModule";
 
 @HtmlTemplate
