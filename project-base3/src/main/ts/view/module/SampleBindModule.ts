@@ -15,13 +15,13 @@ export const GetterKey = {
 }
 
 export const MutationKey = {
-    SET_TITLE: `${NAMESPACE_MUTATION}SET_TITLE`,
+    SET_COMMENT: `${NAMESPACE_MUTATION}SET_COMMENT`,
 }
 
 function createStore(){
     class State {
         constructor(
-            public title: String = null,
+            public comment: String = null,
         ) { }
     }
 
@@ -32,8 +32,8 @@ function createStore(){
     } as ActionTree<State, never>
 
     const mutations = {
-        [MutationKey.SET_TITLE] (state, title:String) {
-            state.title = title;
+        [MutationKey.SET_COMMENT] (state, comment:String) {
+            state.comment = comment;
         },
     } as MutationTree<State>
 

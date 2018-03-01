@@ -8,11 +8,11 @@ import {MutationKey} from "../module/SampleBindModule";
 @Component({
 })
 export class SampleBindComponent extends Vue {
-  get title() {
-    return this.$store.state.sampleBind.title
+  get comment() {
+    return this.$store.state.sampleBind.comment
   }
 
-  set title(value) {
-    this.$store.commit(MutationKey.SET_TITLE, value)
+  set comment(value) {
+    this.$store.commit(MutationKey.SET_COMMENT, value)
   }
 }
