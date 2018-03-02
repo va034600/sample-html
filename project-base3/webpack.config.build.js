@@ -1,9 +1,9 @@
 const webpack = require('webpack');
 var path = require('path');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+var CompressionWebpackPlugin = require("compression-webpack-plugin");
 
 var config = {
-    devtool: "source-map",
-
     output: {
         path: path.join(__dirname, 'dist'),
         filename: '[name].min.js',
@@ -18,35 +18,17 @@ var config = {
     },
     module: {
         rules: [
-            // {
-            //     test: /\.vue$/,
-            //     use: [
-            //         {
-            //             loader: 'babel-loader',
-            //         },
-            //         {
-            //             loader: 'vue-loader'
-            //         }
-            //     ]
-            // },
             {
                 test: /\.vhtml$/,
                 loader: 'vue-template-loader'
             },
             {
                 test: /\.scss$/,
-
-                use: [
-                    {
-                        loader: 'style-loader'
-                    },
-                    {
-                        loader: 'css-loader'
-                    },
-                    {
-                        loader: 'sass-loader'
-                    }
-                ]
+                use: ExtractTextPlugin.extract({
+                    fallback: 'style-loader',
+                    //resolve-url-loader may be chained before sass-loader if necessary
+                    use: ['css-loader', 'sass-loader']
+                })
             },
             {
                 test: /\.ts$/,
@@ -61,12 +43,6 @@ var config = {
             }
         ]
     },
-    plugins:[
-        new webpack.LoaderOptionsPlugin({
-            debug: true
-        }),
-        new webpack.HotModuleReplacementPlugin()
-    ]
 };
 
 
@@ -78,11 +54,19 @@ config.entry = {
         'babel-polyfill',
         'isomorphic-fetch',
         'url-search-params-polyfill',
-        "webpack-dev-server/client?http://localhost:3000",
-        "webpack/hot/dev-server",
         "./src/main/ts/main.ts"
     ],
-    style: "./src/main/ts/style.ts"
 };
+
+config.plugins = [
+    // new ExtractTextPlugin('[name].bundle.css'),
+    // 圧縮
+    new webpack.optimize.UglifyJsPlugin(),
+    // 重複モジュール削除
+    new webpack.optimize.DedupePlugin(),
+    // new CompressionWebpackPlugin({
+    //     test: /\.js/
+    // }),
+];
 
 module.exports = config;

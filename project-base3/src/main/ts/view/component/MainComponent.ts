@@ -12,5 +12,5 @@ import router from '../router/mainRouter'
   store,
 })
 export class MainComponent extends Vue {
-  message: string = 'Hello Vue.js typescript2!!!'
+  message: string = 'Hello Vue.js typescript!!'
 }
