@@ -1,7 +1,5 @@
 const webpack = require('webpack');
 var path = require('path');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
-var CompressionWebpackPlugin = require("compression-webpack-plugin");
 
 var config = {
     output: {
@@ -23,14 +21,6 @@ var config = {
                 loader: 'vue-template-loader'
             },
             {
-                test: /\.scss$/,
-                use: ExtractTextPlugin.extract({
-                    fallback: 'style-loader',
-                    //resolve-url-loader may be chained before sass-loader if necessary
-                    use: ['css-loader', 'sass-loader']
-                })
-            },
-            {
                 test: /\.ts$/,
                 use: [
                     {
@@ -43,6 +33,12 @@ var config = {
             }
         ]
     },
+    plugins:[
+        // 圧縮
+        new webpack.optimize.UglifyJsPlugin(),
+        // 重複モジュール削除
+        new webpack.optimize.DedupePlugin(),
+    ]
 };
 
 
@@ -57,16 +53,5 @@ config.entry = {
         "./src/main/ts/main.ts"
     ],
 };
-
-config.plugins = [
-    // new ExtractTextPlugin('[name].bundle.css'),
-    // 圧縮
-    new webpack.optimize.UglifyJsPlugin(),
-    // 重複モジュール削除
-    new webpack.optimize.DedupePlugin(),
-    // new CompressionWebpackPlugin({
-    //     test: /\.js/
-    // }),
-];
 
 module.exports = config;
