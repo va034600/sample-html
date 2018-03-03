@@ -5,7 +5,6 @@ var config = {
     output: {
         path: path.join(__dirname, 'dist'),
         filename: '[name].min.js',
-        publicPath: "/public/"
     },
     resolve: {
         extensions: [".ts", ".vue", ".js"],
