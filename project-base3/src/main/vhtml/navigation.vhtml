@@ -16,6 +16,7 @@
             <router-link to="/sample-button" class="navbar-item">button</router-link>
             <router-link to="/sample-bind" class="navbar-item">bind</router-link>
             <router-link to="/sample-load" class="navbar-item">load</router-link>
+            <router-link to="/sample-column" class="navbar-item">column</router-link>
             <div class="navbar-item has-dropdown is-hoverable">
                 <router-link to="/sample-parameter" class="navbar-link">parameter</router-link>
                 <div class="navbar-dropdown is-boxed">

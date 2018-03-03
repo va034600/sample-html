@@ -6,6 +6,7 @@ import {SampleButtonComponent} from "../component/SampleButtonComponent";
 import {SampleParameterComponent} from "../component/SampleParameterComponent";
 import {SampleBindComponent} from "../component/SampleBindComponent";
 import {SampleLoadComponent} from "../component/SampleLoadComponent";
+import {SampleColumnComponent} from "../component/SampleColumnComponent";
 
 const rootPath = `/`;
 
@@ -18,6 +19,7 @@ export default new VueRouter({
         { name: 'sample-parameter', path: rootPath + 'sample-parameter/:id', component: SampleParameterComponent},
         { name: 'sample-bind', path: rootPath + 'sample-bind', component: SampleBindComponent},
         { name: 'sample-load', path: rootPath + 'sample-load', component: SampleLoadComponent},
+        { name: 'sample-column', path: rootPath + 'sample-column', component: SampleColumnComponent},
         { path: '*', component: PageNotFoundComponent},
     ]
 })
