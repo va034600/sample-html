@@ -13,15 +13,25 @@
     <div id="navbarExampleTransparentExample" class="navbar-menu" v-bind:class='{"is-active":opendMenu}'>
         <div class="navbar-start">
             <router-link to="/sample" class="navbar-item">sample</router-link>
-            <router-link to="/sample-button" class="navbar-item">button</router-link>
-            <router-link to="/sample-bind" class="navbar-item">bind</router-link>
-            <router-link to="/sample-load" class="navbar-item">load</router-link>
-            <router-link to="/sample-column" class="navbar-item">column</router-link>
+            <div class="navbar-item has-dropdown is-hoverable">
+                <div class="navbar-link">event</div>
+                <div class="navbar-dropdown is-boxed">
+                    <router-link to="/sample-button" class="navbar-item">button</router-link>
+                    <router-link to="/sample-bind" class="navbar-item">bind</router-link>
+                    <router-link to="/sample-load" class="navbar-item">load</router-link>
+                </div>
+            </div>
             <div class="navbar-item has-dropdown is-hoverable">
                 <router-link to="/sample-parameter" class="navbar-link">parameter</router-link>
                 <div class="navbar-dropdown is-boxed">
                     <router-link to="/sample-parameter/123" class="navbar-item">/123</router-link>
                     <router-link to="/sample-parameter/aaa?test=bbb" class="navbar-item">/aaa?test=bbb</router-link>
+                </div>
+            </div>
+            <div class="navbar-item has-dropdown is-hoverable">
+                <div class="navbar-link">css framework</div>
+                <div class="navbar-dropdown is-boxed">
+                    <router-link to="/sample-column" class="navbar-item">column</router-link>
                 </div>
             </div>
             <router-link to="/aaaaaaa" class="navbar-item">page not found</router-link>
