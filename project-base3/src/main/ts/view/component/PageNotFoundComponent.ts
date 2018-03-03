@@ -1,10 +1,9 @@
 /// <reference path="../../index.d.ts"/>
 import Vue from 'vue'
 import Component from 'vue-class-component'
-import HtmlTemplate from '../../../vhtml/page-not-found.vhtml'
 
-@HtmlTemplate
-@Component({
+@Component<PageNotFoundComponent>({
+    template: `<div>page not found!!</div>`
 })
 export class PageNotFoundComponent extends Vue {
 }
