@@ -13,6 +13,8 @@ gulp.task('build-css', function (callback) {
     runSequence('compile-scss', 'import-css', 'minify-css', callback);
 });
 
-gulp.task('build', ['clean-dist', 'build-js', 'build-css']);
+gulp.task('build',function (callback) {
+    runSequence('clean-dist', 'build-js', 'build-css', 'copy-dist', callback);
+});
 
 gulp.task('default', ['webpack-dev-server']);
