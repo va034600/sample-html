@@ -1,0 +1,5 @@
+<div>
+    <h1>sample-modal-button</h1>
+    <a class="button is-light" @click="clickByShowModalButton">show modal</a>
+    <sample-modal />
+</div>

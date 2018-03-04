@@ -2,15 +2,17 @@
 
 import Vue from 'vue'
 import Vuex, {MutationTree} from 'vuex'
-Vue.use(Vuex)
 import EnvironmentUtility from "../../utility/EnvironmentUtility";
 import sampleLoadModule from '../module/SampleLoadModule'
 import sampleBindModule from '../module/SampleBindModule'
+import sampleModalModule from '../module/SampleModalModule'
 
 const NAMESPACE = 'main';
 const NAMESPACE_ACTION = `${NAMESPACE}/a/`
 const NAMESPACE_GETTER = `${NAMESPACE}/g/`
 const NAMESPACE_MUTATION = `${NAMESPACE}/m/`
+
+Vue.use(Vuex)
 
 export const ActionKey = {
 }
@@ -25,6 +27,7 @@ export class RootState {
     constructor(
         public sampleLoad,
         public sampleBind,
+        public sampleModal,
     ) { }
 }
 
@@ -44,6 +47,7 @@ function createStore():any{
         modules:{
             sampleLoad:sampleLoadModule,
             sampleBind:sampleBindModule,
+            sampleModal:sampleModalModule,
         }
     })
 }
