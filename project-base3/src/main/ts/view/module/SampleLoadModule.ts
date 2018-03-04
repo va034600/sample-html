@@ -3,7 +3,7 @@
 import {ActionTree, GetterTree, ModuleTree, MutationTree} from "vuex";
 import SampleAPI from "../../network/api/SampleAPI";
 import {SampleEntity} from "../../network/entity/SampleEntity";
-import {RootState} from "../store/MainStore";
+import {MainState} from "../store/MainStore";
 import {Sample2Parameter} from "../../network/parameter/Sample2Parameter";
 import {Sample2Entity} from "../../network/entity/Sample2Entity";
 
@@ -34,7 +34,7 @@ function createStore(){
     }
 
     const getters = {
-    } as GetterTree<State, RootState>
+    } as GetterTree<State, MainState>
 
     const actions = {
         [ActionKey.LOAD_MESSAGE]: ({ commit }) => {

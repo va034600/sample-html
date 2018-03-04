@@ -23,25 +23,18 @@ export const GetterKey = {
 export const MutationKey = {
 }
 
-export class RootState {
-    constructor(
-        public sampleLoad,
-        public sampleBind,
-        public sampleModal,
-    ) { }
+export class MainState {
+    public sampleLoad
+    public sampleBind
+    public sampleModal
 }
 
 function createStore():any{
-    class State {
-        constructor(
-        ) { }
-    }
-
     const mutations = {
-    } as MutationTree<State>
+    } as MutationTree<MainState>
 
-    return new Vuex.Store<State>({
-        state: new State(),
+    return new Vuex.Store<MainState>({
+        state: new MainState(),
         mutations,
         strict: EnvironmentUtility.isDevelopment(),
         modules:{

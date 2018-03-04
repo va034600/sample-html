@@ -1,7 +1,7 @@
 /// <reference path="../../index.d.ts"/>
 
 import {ActionTree, GetterTree, ModuleTree, MutationTree} from "vuex";
-import {RootState} from "../store/MainStore";
+import {MainState} from "../store/MainStore";
 
 const NAMESPACE = 'sample-bind';
 const NAMESPACE_ACTION = `${NAMESPACE}/a/`
@@ -26,7 +26,7 @@ function createStore(){
     }
 
     const getters = {
-    } as GetterTree<State, RootState>
+    } as GetterTree<State, MainState>
 
     const actions = {
     } as ActionTree<State, never>
