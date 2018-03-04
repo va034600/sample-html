@@ -58,7 +58,7 @@ function createStore(){
                     alert(error);
                 })
         },
-    } as ActionTree<State, never>
+    } as ActionTree<State, MainState>
 
     const mutations = {
         [MutationKey.SET_LOAD_MESSAGE] (state, payload:SampleEntity) {

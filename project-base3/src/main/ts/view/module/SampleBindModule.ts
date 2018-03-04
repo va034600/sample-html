@@ -29,7 +29,7 @@ function createStore(){
     } as GetterTree<State, MainState>
 
     const actions = {
-    } as ActionTree<State, never>
+    } as ActionTree<State, MainState>
 
     const mutations = {
         [MutationKey.SET_COMMENT] (state, comment:String) {
