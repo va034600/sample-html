@@ -1,19 +1,17 @@
 <div>
     <div class="control is-hidden-tablet">
         <label class="radio">
-            <input type="radio" id="aaa" value="AAA" v-model="selectType">
-            <label for="aaa">AAA</label>
+            <input type="radio" id="lf" value="LEFT" v-model="selectType">
+            <label for="lf">左側</label>
         </label>
         <label class="radio">
-            <input type="radio" id="bbb" value="BBB" v-model="selectType">
-            <label for="bbb">BBB</label>
+            <input type="radio" id="ri" value="RIGHT" v-model="selectType">
+            <label for="ri">右側</label>
         </label>
     </div>
-
     <div class="columns">
-        <div class="column is-6-tablet" v-bind:class="{'is-hidden-mobile':selectType !== 'AAA'}">
-
-
+        <!-- 左側 -->
+        <div class="column is-6-tablet" v-bind:class="{'is-hidden-mobile':selectType !== 'LEFT'}">
             <div class="box">
                 <article class="media">
                     <div class="media-left">
@@ -24,22 +22,17 @@
                     <div class="media-content">
                         <div class="content">
                             <p>
-                                <strong>John Smith</strong> <small>@johnsmith</small> <small>31m</small>
-                                <br>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis.
+                                左側
                             </p>
                         </div>
                     </div>
                 </article>
             </div>
-
-
         </div>
-        <div class="column is-6-tablet" v-bind:class="{'is-hidden-mobile':selectType !== 'BBB'}">
-
-
+        <!-- 右側 -->
+        <div class="column is-6-tablet" v-bind:class="{'is-hidden-mobile':selectType !== 'RIGHT'}">
             <div class="field">
-                <label class="label">Label</label>
+                <label class="label">右側</label>
                 <div class="control">
                     <input class="input" type="text" placeholder="Text input">
                 </div>
@@ -53,8 +46,6 @@
                     <button class="button is-text">Cancel</button>
                 </div>
             </div>
-
-
         </div>
     </div>
 </div>

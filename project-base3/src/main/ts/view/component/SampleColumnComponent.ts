@@ -7,7 +7,7 @@ import HtmlTemplate from '../../../vhtml/sample-column.vhtml'
 @Component({
 })
 export class SampleColumnComponent extends Vue {
-    st = "BBB"
+    st = "RIGHT"
 
     get selectType(){
         return this.st;

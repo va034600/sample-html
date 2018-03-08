@@ -2,9 +2,9 @@
   "name": "project-base3",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "main.js",
   "author": "",
-  "license": "ISC",
+  "license": "",
   "devDependencies": {
     "babel-core": "6.21.0",
     "babel-loader": "6.2.10",
