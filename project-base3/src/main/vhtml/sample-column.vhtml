@@ -1,4 +1,5 @@
 <div>
+    <!-- ラジオボタンはモバイルのサイズの時のみ表示 -->
     <div class="control is-hidden-tablet">
         <label class="radio">
             <input type="radio" id="lf" value="LEFT" v-model="selectType">
@@ -10,7 +11,7 @@
         </label>
     </div>
     <div class="columns">
-        <!-- 左側 -->
+        <!-- 左側 モバイルの時のみ表示切り替え発生-->
         <div class="column is-6-tablet" v-bind:class="{'is-hidden-mobile':selectType !== 'LEFT'}">
             <div class="box">
                 <article class="media">
@@ -29,7 +30,7 @@
                 </article>
             </div>
         </div>
-        <!-- 右側 -->
+        <!-- 右側 モバイルの時のみ表示切り替え発生 -->
         <div class="column is-6-tablet" v-bind:class="{'is-hidden-mobile':selectType !== 'RIGHT'}">
             <div class="field">
                 <label class="label">右側</label>

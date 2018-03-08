@@ -33,6 +33,10 @@ var config = {
         ]
     },
     plugins:[
+        //引数
+        new webpack.DefinePlugin({
+            'process.env.NODE_ENV': JSON.stringify("production")
+        }),
         // 圧縮
         new webpack.optimize.UglifyJsPlugin(),
         // 重複モジュール削除
@@ -45,6 +49,7 @@ var config = {
 
 
 config.entry = {
+    //mainファイルを作成する。複数作れば複数作られる。
     main: [
         'babel-polyfill',
         'isomorphic-fetch',

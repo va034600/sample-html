@@ -12,6 +12,7 @@ export class SampleModalComponent extends Vue {
         return this.$store.state.sampleModal.shown
     }
 
+    //クローズボタン押下時にshownをfalseにしてモーダルを非表示にします。
     clickByCloseButton() {
         this.$store.commit(MutationKey.SET_SHOWN, false)
     }

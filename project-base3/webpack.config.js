@@ -74,6 +74,7 @@ var config = {
 
 
 config.entry = {
+    //mainファイルを作成する。複数作れば複数作られる。
     main: [
         'babel-polyfill',
         'isomorphic-fetch',
