@@ -1,6 +1,6 @@
 <nav class="navbar is-transparent is-black">
     <div class="navbar-brand">
-        <router-link to="/" class="navbar-item">
+        <router-link :to="{name:'top'}" class="navbar-item">
             top
         </router-link>
         <!-- メニューが小さい時にバーガーボタンを表示 -->
@@ -18,23 +18,23 @@
             <div class="navbar-item has-dropdown is-hoverable">
                 <div class="navbar-link">event</div>
                 <div class="navbar-dropdown is-boxed">
-                    <router-link to="/sample-button" class="navbar-item">button</router-link>
-                    <router-link to="/sample-bind" class="navbar-item">bind</router-link>
-                    <router-link to="/sample-load" class="navbar-item">load</router-link>
+                    <router-link :to="{name:'sample-button'}" class="navbar-item">button</router-link>
+                    <router-link :to="{name:'sample-bind'}" class="navbar-item">bind</router-link>
+                    <router-link :to="{name:'sample-load'}" class="navbar-item">load</router-link>
                 </div>
             </div>
             <div class="navbar-item has-dropdown is-hoverable">
                 <router-link to="/sample-parameter" class="navbar-link">parameter</router-link>
                 <div class="navbar-dropdown is-boxed">
-                    <router-link to="/sample-parameter/123" class="navbar-item">/123</router-link>
-                    <router-link to="/sample-parameter/aaa?test=bbb" class="navbar-item">/aaa?test=bbb</router-link>
+                    <router-link :to="{name:'sample-parameter', params: { id: 123 }}" class="navbar-item">/123</router-link>
+                    <router-link :to="{name:'sample-parameter', params: { id: 'aaa' }, query: { test: 'bbb' }}" class="navbar-item">/aaa?test=bbb</router-link>
                 </div>
             </div>
             <div class="navbar-item has-dropdown is-hoverable">
                 <div class="navbar-link">css framework</div>
                 <div class="navbar-dropdown is-boxed">
-                    <router-link to="/sample-modal-button" class="navbar-item">modal button</router-link>
-                    <router-link to="/sample-column" class="navbar-item">column</router-link>
+                    <router-link :to="{name:'sample-modal-button'}" class="navbar-item">modal button</router-link>
+                    <router-link :to="{name:'sample-column'}" class="navbar-item">column</router-link>
                 </div>
             </div>
         </div>
