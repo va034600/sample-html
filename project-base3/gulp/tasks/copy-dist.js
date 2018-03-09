@@ -5,5 +5,5 @@ gulp.task('copy-dist', function(callback) {
         'dist/css-min/index.min.css',
         'dist/js-min/main.min.js'
     ])
-        .pipe(gulp.dest('webRoot/dist'));
+        .pipe(gulp.dest('webRootLive/dist'));
 });

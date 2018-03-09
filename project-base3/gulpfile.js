@@ -17,4 +17,6 @@ gulp.task('build',function (callback) {
     runSequence('clean-dist', 'build-js', 'build-css', 'copy-dist', callback);
 });
 
+gulp.task('live', ['webpack-dev-server-live']);
+
 gulp.task('default', ['webpack-dev-server']);
