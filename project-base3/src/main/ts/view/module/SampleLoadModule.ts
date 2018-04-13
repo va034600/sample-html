@@ -37,20 +37,14 @@ function createStore(){
     } as GetterTree<State, MainState>
 
     const actions = {
-        [ActionKey.LOAD_MESSAGE]: ({ commit }) => {
-            return SampleAPI.getSample()
-                .then((res) =>{
-                    commit(MutationKey.SET_LOAD_MESSAGE, res)
-                })
-                .catch(function(error) {
-                    alert(error);
-                })
+        [ActionKey.LOAD_MESSAGE]: async ({ commit }) => {
+            var data = await SampleAPI.getSample();
+            commit(MutationKey.SET_LOAD_MESSAGE, data)
         },
         [ActionKey.LOAD_TITLE]: ({ commit }, p1) => {
-            const parameter:Sample2Parameter = {
+            return SampleAPI.getSample2({
                 abc:p1
-            };
-            return SampleAPI.getSample2(parameter)
+            })
                 .then((res) =>{
                     commit(MutationKey.SET_LOAD_TITLE, res)
                 })
