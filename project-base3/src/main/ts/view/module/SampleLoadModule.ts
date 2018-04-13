@@ -4,7 +4,6 @@ import {ActionTree, GetterTree, ModuleTree, MutationTree} from "vuex";
 import SampleAPI from "../../network/api/SampleAPI";
 import {SampleEntity} from "../../network/entity/SampleEntity";
 import {MainState} from "../store/MainStore";
-import {Sample2Parameter} from "../../network/parameter/Sample2Parameter";
 import {Sample2Entity} from "../../network/entity/Sample2Entity";
 
 const NAMESPACE = 'sample-load';
