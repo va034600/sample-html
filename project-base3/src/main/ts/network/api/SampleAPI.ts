@@ -17,6 +17,7 @@ export default class SampleAPI extends BaseAPI {
 
         var params = new WebUrlParams();
         params.append("abc", parameter.abc);
+        params.append("ddd", parameter.ddd);
 
         return this.get<Sample2Entity>(apiUrl, params);
     }
