@@ -1,0 +1,7 @@
+{
+  "name": "sample-service-worker",
+  "short_name": "ssw",
+  "icons": [],
+  "display": "standalone",
+  "start_url": "/"
+}
