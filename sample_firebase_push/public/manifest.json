@@ -1,0 +1,8 @@
+{
+  "name": "sample-firebase-push",
+  "short_name": "sfp",
+  "icons": [],
+  "display": "standalone",
+  "start_url": "/",
+  "gcm_sender_id": "103953800507"
+}
