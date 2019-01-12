@@ -21,7 +21,7 @@ registry=http://mlocalhost:8081/repository/my-npm-group-repo/
 ## npm publish
 
 ```
-$ cd fetch-sample
+$ cd fetch-library
 $ npm publish
 ```
 
@@ -29,6 +29,6 @@ $ npm publish
 
 ```
 $ npm install
-$ cd main
+$ cd fetch-main
 $ node src/index.js
 ```
