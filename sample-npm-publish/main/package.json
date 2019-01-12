@@ -1,0 +1,15 @@
+{
+  "name": "fetch-sample",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "private": false,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@va034600/fetch-sample": "^1.0.0"
+  }
+}
