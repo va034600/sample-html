@@ -25,10 +25,46 @@ $ cd yarn-fetch-library
 $ yarn publish
 ```
 
-## test
+## yarn install
 
 ```
 $ yarn install
+```
+
+## yarn-fetch-library/src/index.js 修正
+
+```
+# 4 を追加
+_.each([1, 2, 3, 4], console.log);
+```
+
+## test1
+
+```
 $ cd yarn-fetch-main
 $ node src/index.js
 ```
+
+console.logから反映されないこと確認
+
+
+## yarn link
+
+```
+$ cd yarn-fetch-library
+$ yarn link
+```
+
+```
+$ cd yarn-fetch-main
+$ yarn link @va034600/yarn-fetch-library
+```
+
+## test2
+
+```
+$ cd yarn-fetch-main
+$ node src/index.js
+```
+
+console.logから反映されていること確認
