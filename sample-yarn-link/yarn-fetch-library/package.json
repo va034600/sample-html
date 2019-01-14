@@ -15,6 +15,6 @@
     "src"
   ],
   "publishConfig": {
-    "registry": "http://localhost:8081/repository/my-npm-hosted-repo/"
+    "registry": "http://localhost:9998/repository/my-npm-hosted-repo/"
   }
 }
