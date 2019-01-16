@@ -15,7 +15,7 @@ always-auth=true
 # $ echo -n 'admin:admin123' | openssl base64
 _auth=YWRtaW46YWRtaW4xMjM=
 
-registry=http://mlocalhost:9998/repository/my-npm-group-repo/
+registry=http://localhost:9998/repository/my-npm-group-repo/
 ```
 
 ## yarn publish
